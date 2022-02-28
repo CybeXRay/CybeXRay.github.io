@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>hashcat & hashid</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>hashcat & hashid</h1><br/>We can see the credentials of admin:2cb42f8734ea607eefed3b70af13bbd3 , which we might be able to use.<br />But the password seems hashed.<br />We will try to identify the hash type &amp; crack it with the hashcat:<br /><br /><br /><a href=""><img src="images/34-1.png" alt="images/34-1.png" /></a><br /><br />It provides a huge list of possible hashes, however, we will go with MD5 first:<br />We will put the hash in a text file called hash &amp; then crack it with hashcat:<br /><br /><a href=""><img src="images/34-2.png" alt="images/34-2.png" /></a><br /><br />We got the password : qwerty789</div>
+</body>
+</html>

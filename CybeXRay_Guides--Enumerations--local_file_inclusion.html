@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>local file inclusion</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>local file inclusion</h1><br/>Local file inclusion (also known as LFI) is the process of including files, that are<br />already locally present on the server, through the exploitation of vulnerable inclusion<br />procedures implemented in an application.<br /><br /><br />We can easily determine if this is the case by attempting to load a file that we know definitely exists on the<br />system and is readable by all users. One of those files is /etc/passwd and to load it, change the file<br />parameter from home.php to /etc/passwd . For consistency reasons we will show this process with the<br />cURL command line utility instead of a browser.<br /><br /><br />curl &#39;http://{target_IP}/?file=/etc/passwd&#39;<br /><br /><a href=""><img src="images/42-1.png" alt="images/42-1.png" /></a><br /><br />This is successful and a list of users is returned.<br />It is worth noting that inputting /etc/passwd might not always work if the inclusion already specifies a<br />working directory.<br /><br />For instance, consider the following code.<br /><br />if ($_GET[&#39;file&#39;]) {<br />include( __DIR__ . $_GET[&#39;file&#39;]);<br />} else {<br />header(&quot;Location: <a href="http://$_SERVER[HTTP_HOST]/index.php?file=home.php">http://$_SERVER[HTTP_HOST]/index.php?file=home.php</a>&quot;);<br />}<br /><br /><br />In this example the __DIR__ parameter is used to acquire the current working directory that the script is<br />located in (e.g. /var/www/html ) and then the value of the file variable is concatenated at the end. If we<br />were to input /etc/passwd the full path would become /var/www/html/etc/passwd , which would result<br />in a blank page as there is no such file or folder on the system.<br />To bypass this restriction we would have to instruct the code to search in previous directories. This would<br />work similarly to how navigating to a previous folder is done with the cd command.<br /><br /><br />In such a case, /etc/passwd would become ../../../etc/passwd .<br /><br />Example:<br />curl &#39;http://{target_IP}/?file=/var/lib/tftpboot/shell.php&#39;<br /></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>samba</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>samba</h1><br/>apt install smbclient<br />Default Port: 445<br /><br />smbclient -L {Target_IP}<br /><br />It is used to list the samba share. Leave the password field blank <br /><br /><a href=""><img src="images/13-1.png" alt="images/13-1.png" /></a><br /><br />or use -N switch for no password (Only for Listing)<br /><br />smbclient -N -L  {Target_IP}<br /><br /><a href=""><img src="images/13-2.png" alt="images/13-2.png" /></a><br /><br /><br />smbclient -L  {Target_IP} -U Administrator<br /><br />For misconfigurtions of Admin account. Note if -U not specified by default the user is root.<br /><br /><a href=""><img src="images/13-3.png" alt="images/13-3.png" /></a></div>
+</body>
+</html>

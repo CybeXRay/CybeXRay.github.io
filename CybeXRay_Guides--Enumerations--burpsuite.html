@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>burpsuite</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>burpsuite</h1><br/>A web crawler (also known as a web spider or web robot) is a program or automated<br />script which browses the World Wide Web in a methodical, automated manner. This process<br />is called Web crawling or spidering. Many legitimate sites, in particular search<br />engines, use spidering as a means of providing up-to-date data.<br /><br />If you tunnel web traffic through Burp Suite (<strong>without intercepting the packets</strong>), by<br />default it can passively spider the website, update the site map with all of the<br />contents requested and thus creating a tree of files and directories without sending<br />any further requests.<br /><br /><br />Firefox Proxy Settings:<br /><br /><a href=""><img src="images/28-1.png" alt="images/28-1.png" /></a><br /><br /><a href=""><img src="images/28-2.png" alt="images/28-2.png" /></a><br /><br />Burpsuite Settings:<br /><br />We need to disable the interception in Burp suite as it&#39;s enabled by default. Navigate to Proxy Tab , and<br />under Intercept subtab select the button where Intercept in on so to disable it.<br /><br /><a href=""><img src="images/28-3.png" alt="images/28-3.png" /></a><br /><br /><br />Now that everything is setup correctly we refresh the page in our browser and switch in Burp Suite under<br />the Target tab and then on the Sitemap option:<br /><br /><a href=""><img src="images/28-4.png" alt="images/28-4.png" /></a><br /><br />Now we can use the hidden login info.<br /><br /><a href="http://10.129.95.191/cdn-cgi/login">http://10.129.95.191/cdn-cgi/login</a><br /><br /><br /><br />First, we attempt to login to the page with the credentials test:test as we aren’t trying to validate or gain<br />access. The login request will be captured by BurpSuite and we will be able to modify it.<br />Before we modify the request, let&#39;s send this HTTPS packet to the Repeater module of BurpSuite by<br />pressing CTRL+R .<br /><br /><br /><a href=""><img src="images/28-5.png" alt="images/28-5.png" /></a><br /><br /><a href=""><img src="images/28-6.png" alt="images/28-6.png" /></a><br /><br /><br /><a href=""><img src="images/28-7.png" alt="images/28-7.png" /></a></div>
+</body>
+</html>

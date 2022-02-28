@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>gobuster</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>gobuster</h1><br/>apt install gobuster<br />or<br />go install github.com/OJ/gobuster/v3@latest<br />or<br />sudo git clone <a href="https://github.com/OJ/gobuster.git">https://github.com/OJ/gobuster.git</a><br />cd gobuster<br />go get &amp;&amp; go build<br />go install<br /><br />Usage:<br /><br />dir : specify we are using the directory busting mode of the tool<br />-w : specify a wordlist, a collection of common directory names that are typically used for sites<br />-u : specify the target&#39;s IP address<br /><br />General Wordlist Locations:<br /><br />/usr/share/wordlists/dirb/common.txt<br />/usr/share/wordlists/dirbuster/......<br /><br />If SecLists is installed (<a href="https://github.com/CybeXRay/SecLists">https://github.com/CybeXRay/SecLists</a>)<br />/usr/share/seclists/Discovery/Web-Content/directory-list-2.3-small.txt<br /><br /><br /><br />gobuster dir -u {Target_URL} -w {Path to Wordlist} [-x {File types, eg php,html} OPTIONAL]<br /><br />Note: The -x Option is only used to find specific type of files.<br /><br /><a href=""><img src="images/16-1.png" alt="images/16-1.png" /></a><br /><br />One Example with -x<br /><br /><a href=""><img src="images/16-2.png" alt="images/16-2.png" /></a><br /><br /><br />Note: Similar Application in HTB Academy course --→ <strong>Ffuf</strong></div>
+</body>
+</html>
