@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>nmap</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>nmap</h1><br/>nmap [switch/es] {Target_IP}<br /><br />-sC - Performs a script scan using the default set of scripts. It is equivalent to --script=default. Some of the scripts in this category are considered intrusive and should not be run against a target network without permission.<br /><br />-sV - Enables version detection, which will detect what versions are running on what port &amp; OS Discovery [Noisy for Firewalls]<br /><br />-v   - Increases the verbosity level, causing Nmap to print more information about the scan in progress.<br /><br />-Pn - Treat all hosts as online -- skip host discovery [Used in place of -sV] Protects some what against firewalls<br /><br />-A : Enable OS detection, version detection, script scanning, and traceroute<br /><br />-sU - Scans for UDP Ports<br /><br />The following link can be used to learn about all the ports<br /><br />Example for port:135<br /><a href="https://www.speedguide.net/port.php?port=135">https://www.speedguide.net/port.php?port=135</a><br /><br /><br />Nmap with hostname &amp; specific ports:<br /><br />nmap -sC -sV backdoor.htb -p22,80,1337 -T4<br /><br /></div>
+</body>
+</html>

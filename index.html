@@ -1,70 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>HackTheBox-CTF.ctd</title>
-  <meta name="generator" content="CherryTree">
-  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
-</head>
-<body>
-<div class='two-panels'>
-<div class='tree-panel'>
-<div class='tree'>
-<p>
-<strong>Index</strong></br>
-<button onclick='expandAllSubtrees()'>Expand All</button> <button onclick='collapseAllSubtrees()'>Collapse All</button>
-</p>
-<ul class='outermost'>
-<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides.html')">CybeXRay Guides</a></li><ul class='subtree'>
-<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Connections.html')">Connections</a></li><ul class='subtree'>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Connections--VPN_Connection.html')">VPN Connection</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Connections--ports.html')">ports</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Connections--shell_beautify.html')">shell beautify</a></li>
-</ul>
-<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Enumerations.html')">Enumerations</a></li><ul class='subtree'>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Enumerations--ping.html')">ping</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Enumerations--nmap.html')">nmap</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Enumerations--curl_&_dns.html')">curl & dns</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Enumerations--gobuster.html')">gobuster</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Enumerations--samba.html')">samba</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Enumerations--impacket.html')">impacket</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Enumerations--type.html')">type</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Enumerations--burpsuite.html')">burpsuite</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Enumerations--cookies.html')">cookies</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Enumerations--john_the_ripper.html')">john the ripper</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Enumerations--hashcat_&_hashid.html')">hashcat & hashid</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Enumerations--cookie_editor.html')">cookie editor</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Enumerations--local_file_inclusion.html')">local file inclusion</a></li>
-</ul>
-<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold.html')">Foothold</a></li><ul class='subtree'>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--telnet.html')">telnet</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--ftp.html')">ftp</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--xfreerdp.html')">xfreerdp</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--netcat.html')">netcat</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--samba.html')">samba</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--jenkins.html')">jenkins</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--sql_injection_(manual).html')">sql injection (manual)</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--sql_injection_(sqlmap).html')">sql injection (sqlmap)</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--mysql.html')">mysql</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--wappalyzer.html')">wappalyzer</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--powershell.html')">powershell</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--privilege_escalation.html')">privilege escalation</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--php_reverse_shell.html')">php reverse shell</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--searching_password.html')">searching password</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--suid_exploitation.html')">suid exploitation</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--vi_only_as_root.html')">vi only as root</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--unify.html')">unify</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--mongo_db.html')">mongo db</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--samba_username_map.html')">samba username map</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--tftp.html')">tftp</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--lxd.html')">lxd</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Foothold--XML_External_Entities.html')">XML External Entities</a></li>
-</ul>
-</ul>
-</ul>
-</div>
-</div>
-<div class='page-panel'><iframe src='' id='page_frame'></iframe></div></div><script src='res/script3.js'></script>
-
-</body>
-</html>
+  <head>
+    <title>CybeXRay</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+     integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+      <div class="w3-row">
+        <div class="w3-half"><strong><h1 class="text-left"><b>SecureX</b></h1></strong></div>
+        <div class="w3-half"><strong><h2><b>CybeXRay Blog</b></h2></strong></div>
+      </div>
+      <div class="w3-row">
+        <div class="w3-quarter">
+          <br>
+            <div class="menu">
+             <nav class="navbar">
+               <ul class="navbar-nav list-group">
+                  <li class="nav-item text-center list-group-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item text-center list-group-item">
+                      <a class="nav-link" href="pocketbook/pb.html">Pocket Book</a>
+                  </li>
+                  <li class="nav-item text-center list-group-item">
+                      <a class="nav-link" href="revshell/revshell.html">Reverse Shells</a>
+                  </li>
+               </ul>
+            </nav>
+           <ul class="site-links">
+             <li class="text-right">
+                 <a href="#">Our service</a>
+             </li>
+             <li class="text-right">
+                 <a href="#">Our portfolio</a>
+             </li>
+             <li class="text-right">
+                 <a href="#">Blog</a>
+             </li>
+             <li class="text-right">
+                 <a href="#">Our service</a>
+             </li>
+             <li class="text-right">
+                 <a href="#">Our portfolio</a>
+             </li>
+             <li class="text-right">
+                 <a href="#">Blog</a>
+             </li>
+           </ul>
+           <br>
+           <br>
+           <br>
+           <ul class="social text-center">
+             <li> <a href="#"><i class="fab fa-facebook-f"></i></a>
+             </li>
+             <li> <a href="#"><i class="fab fa-google-plus-g"></i></a>
+             </li>
+             <li> <a href="#"><i class="fab fa-twitter"></i></a>
+             </li>
+             <li> <a href="#"><i class="fab fa-pinterest-p"></i></a>
+             </li>
+             <li> <a href="#"><i class="fab fa-behance"></i></a>
+             </li>
+             <li> <a href="#"><i class="fab fa-instagram"></i></a>
+             </li>
+           </ul>
+           <br>
+         </div>
+        </div>
+        <div class="w3-rest">
+          <br>
+             <div class="w3-row">
+                 <div class="w3-col s4">
+                   <img src="main/images/19.jpeg">
+                 </div>
+                 <div class="w3-col s4">
+                   <img src="main/images/20.jpeg">
+                 </div>
+                 <div class="w3-col s4">
+                   <img src="main/images/21.jpeg">
+                 </div>
+             </div>
+             <div class="w3-row">
+                 <div class="w3-col s4">
+                   <img src="main/images/16.jpeg">
+                 </div>
+                 <div class="w3-col s4 bg">
+                    <img src="main/images/17.jpeg">
+                 </div>
+                 <div class="w3-col s4">
+                   <img src="main/images/18.jpeg">
+                 </div>
+             </div>
+             <div class="w3-row">
+                 <div class="w3-col s4">
+                   <img src="main/images/13.jpeg">
+                 </div>
+                 <div class="w3-col s4">
+                   <img src="main/images/14.jpeg">
+                 </div>
+                 <div class="w3-col s4">
+                   <img src="main/images/15.jpeg">
+                 </div>
+             </div>
+        </div>
+      </div>
+    </body>
+  </html>
