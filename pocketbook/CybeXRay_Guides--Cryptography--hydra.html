@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>hydra</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>hydra</h1><br/><strong>Password Bruteforce</strong><br /><br />hydra -l username -P wordlist.txt server service<br /><br />-l : Username<br />-P: Password wordlist<br />server: It is the hostname or IP address of the target server.<br />service: It indicates the service which you are trying to launch the dictionary attack<br /><br />-s PORT : To specify “non default” port number<br />-v	: Verbose<br />-vv : Very Verbose<br />-t N : Where N is the number of parallel connections to the target. eg. -t 16<br />-d : Debugging information<br /><br />Note: -l ------&gt; Lowercase L<br /><br />Eg. hydra -l mark -P /usr/share/wordlists/rockyou.txt 10.10.117.110 ftp<br />or<br />hydra -l mark -P /usr/share/wordlists/rockyou.txt <a href="ftp://10.10.117.110">ftp://10.10.117.110</a><br /><br /><br />Live Example:<br /><br />hydra -l lazie -P /usr/share/wordlists/rockyou.txt -vv 10.10.117.110 imap</div>
+</body>
+</html>

