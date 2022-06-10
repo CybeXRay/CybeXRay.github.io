@@ -7,6 +7,6 @@
   <link rel="stylesheet" href="res/styles4.css" type="text/css" />
 </head>
 <body>
-<div class='page'><h1 class='title'>wpscan</h1><br/>wpscan is used to scan wordpress for vulnearbilities<br /><br />Register at wpscan to get free api-token<br /><br /><a href="https://wpscan.com/profile">https://wpscan.com/profile</a><br /><br /><br />Plugin Scan<br /><br />wpscan --url <a href="http://10.10.11.125/">http://10.10.11.125/</a> --api-token Z1BvCTDIX71A7sqyrsCT1VbJO94pisaX5XuVG3sJjGE --enumerate p,u --plugins-detection aggressive</div>
+<div class='page'><h1 class='title'>wpscan</h1><br/><strong><h1>wpscan</h1></strong><h1> is used to scan wordpress for vulnearbilities</h1><br /><br />Register at wpscan to get free api-token<br /><br /><a href="https://wpscan.com/profile">https://wpscan.com/profile</a><br /><br /><br /><strong><h3>Plugin Scan</h3></strong><br /><br />wpscan --url <a href="http://10.10.11.125/">http://10.10.11.125/</a> --api-token Z1BvCTDIX71A7sqyrsCT1VbJO94pisaX5XuVG3sJjGE --enumerate p,u --plugins-detection aggressive<br /><br /><br /><strong><h3>To Enumerate Users</h3></strong><br /><br /><strong>wpscan --url http://blog.thm/ -e u</strong><br /><br /><br /><strong><h3>To Brute Force Usernames and Passwords</h3></strong><br /><br />Single User<br /><strong>wpscan --url http://blog.thm/ -P /usr/share/wordlists/rockyou.txt -U kwheel --max-threads 50</strong><br /><br />Take User from File<br /><strong>wpscan --url http://blog.thm/ -P /usr/share/wordlists/rockyou.txt -U blog_users --max-threads 50</strong></div>
 </body>
 </html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>GetNPUsers.py</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>GetNPUsers.py</h1><br/><strong>GetNPUsers</strong><br /><br /><strong><span style="text-decoration:underline;">Exploiting AS-REP Roasting using impacket</span></strong> <br /><br /><strong>Note:</strong> Same can be done using Rubeus (<strong>See CybexRay Guides ------→ Active Directory -------→ AS-REP Roasting</strong>)<br /><br />&quot;GetNPUsers.py&quot; (located in impacket/examples/GetNPUsers.py) that will allow us to query ASReproastable accounts from the Key Distribution Center. The only thing that&#39;s necessary to query accounts is a valid set of usernames which we enumerated previously via Kerbrute.<br /><br /><strong>Note:</strong> ASReproasting occurs when a user account has the privilege &quot;Does not require Pre-Authentication&quot; set. This means that the account does not need to provide valid identification before requesting a Kerberos Ticket on the specified user account.<br /><br />We can try with individual usernames:<br /><br /><strong>impacket-GetNPUsers spookysec.local/administrator -no-pass -dc-ip 10.10.11.113</strong><br /><br /><a href=""><img src="images/155-1.png" alt="images/155-1.png" /></a><br /><br />Or we can give a user file.<br /><br /><strong>impacket-GetNPUsers spookysec.local/ -no-pass -usersfile userfile.txt -dc-ip 10.10.11.113</strong><br /><br /><a href=""><img src="images/155-2.png" alt="images/155-2.png" /></a><br /><br />We see that <strong>svc-admin</strong> has &quot;<strong>Does not require Pre-Authentication</strong>&quot; set.<br /><br />Next we try to crack the password for svc-admin using hashcat.</div>
+</body>
+</html>
