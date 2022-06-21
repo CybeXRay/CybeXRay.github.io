@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>anonymous</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>anonymous</h1><br/><strong><h1>THM: Anonymous</h1></strong><br /><br /><strong><h2>Enumeration</h2></strong><br /><br /><br /><strong>Rustscan and Nmap</strong><br /><img src="images/36-1.png" alt="images/36-1.png" /><br /><br /><strong>Samba Share (Rabbit Hole)</strong><br /><img src="images/36-2.png" alt="images/36-2.png" /><br /><br />It seems we can access pics share. We connect to it and get the files.<br /><img src="images/36-3.png" alt="images/36-3.png" /><br /><br /><strong>Image Enumeration</strong><br />We use <strong>exiftool, steghide and binwalk</strong>. It turns out to be a rabbit hole with no useful information<br /><br />Then we continue our enumeration<br /><strong>FTP</strong><br /><img src="images/36-4.png" alt="images/36-4.png" /><br /><br />We got 3 files in FTP. Lets look at them.<br /><br /><img src="images/36-5.png" alt="images/36-5.png" /><br /><br />It seems that the script clean.sh is running automatically after certain time intervals.<br /><br /><br /><strong><h2>Foothold</h2></strong><br /><br /><strong>Our Approach</strong><br />We will edit the local clean.sh and add a reverse shell. We will upload it back using FTP and hope we get a connection back<br /><img src="images/36-6.png" alt="images/36-6.png" /><br /><br />Then we upload it.<br /><img src="images/36-7.png" alt="images/36-7.png" /><br /><br /><br /><br /><strong>Note: </strong>Also add execution permission to clean.sh before uploading.<br /><strong>chmod +x clean.sh</strong><br /><br />We start our listener and wait for the script to run automatically. (Runs every minute: Found out later)<br /><img src="images/36-8.png" alt="images/36-8.png" /><br /><br />We get user.txt in the <strong>namelessone&#39;s</strong> home directory.<br /><br /><strong><h2>Privilege Escalation</h2></strong><br /><br />We check for SUID set files.<br /><strong>find / -type f -perm -u=s 2&gt;/dev/null</strong><br /><br /><img src="images/36-9.png" alt="images/36-9.png" /><br /><br />We found /usr/bin/env has SUID bit set. We use GTFObins to find the exploit.<br /><br /><strong>/usr/bin/env /bin/bash -p </strong><br /><br /><img src="images/36-10.png" alt="images/36-10.png" /><br /><br /><br /><br /></div>
+</body>
+</html>

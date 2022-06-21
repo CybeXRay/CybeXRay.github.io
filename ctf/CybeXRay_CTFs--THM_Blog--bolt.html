@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>bolt</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>bolt</h1><br/><strong><h1>THM: Bolt</h1></strong><br /><br /><strong><h3>Nmap Scan</h3></strong><br /><br /><img src="images/21-1.png" alt="images/21-1.png" /><br /><br />We found 3 open ports: <strong>22,80,8000</strong><br />We find a CMS (Content Management System) in 8000 port.<br /><br /><strong><h3>Website Emuneration</h3></strong><br /><br />Manual Browsing:<br />Upon browsing the website we find a username and password. <br /><strong>Note: </strong>Both username and password are present in clear text in the webpage.<br /><br />Credential Found:<br /><strong>Username:	bolt<br />Password:		boltadmin123</strong><br /><br />Also during browsing we came to know the website is using a <strong>Bolt CMS</strong>. This can be found by the link provided to its official site.<br />Next, upon searching online we found that, the <strong>default</strong> Bold CMS Management page is at <strong>/bolt</strong><br /><br /><img src="images/21-2.png" alt="images/21-2.png" /><br /><br />We use the found credentials to login the <strong>Bolt CMS</strong>.<br />Upon Login we found the version to be <strong>3.7.1</strong><br /><br /><strong><h3>Foothold</h3></strong><br /><br />Upon research we find the <strong>Bolt CMS 3.7.0</strong> has a vulnerability which can be exploited using metsploit framework. We tried the same exploit on this version. (We got lucky)<br /><br />We will use: <strong>exploit/unix/webapp/bolt_authenticated_rce</strong><br /><br /><img src="images/21-3.png" alt="images/21-3.png" /><br /><br />We set the above options. Following is the final <strong>show options</strong> page<br /><br /><img src="images/21-4.png" alt="images/21-4.png" /><br /><br />We run the exploit and get root shell access.<br /><br /><img src="images/21-5.png" alt="images/21-5.png" /><br /><br />We collect the flags.<br /><br />Thanks!!</div>
+</body>
+</html>

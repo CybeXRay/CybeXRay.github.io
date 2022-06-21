@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Pocket-Book.ctd</title>
+  <title>Pocket-Book.ctb</title>
   <meta name="generator" content="CherryTree">
   <link rel="stylesheet" href="res/styles4.css" type="text/css" />
 </head>
@@ -57,11 +57,13 @@
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Cryptography--hashcat_&_hashid.html')">hashcat & hashid</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Cryptography--hex_dump.html')">hex dump</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Cryptography--base_64_decoding.html')">base 64 decoding</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Cryptography--openssl.html')">openssl</a></li>
 </ul>
 <li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Samba.html')">Samba</a></li><ul class='subtree'>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Samba--smbclient.html')">smbclient</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Samba--smbmap.html')">smbmap</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Samba--smbget.html')">smbget</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Samba--ms17-010.html')">ms17-010</a></li>
 </ul>
 <li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Web_Exploits.html')">Web Exploits</a></li><ul class='subtree'>
 <li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Web_Exploits--SQL_Injection.html')">SQL Injection</a></li><ul class='subtree'>
@@ -70,6 +72,7 @@
 </ul>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Web_Exploits--local_file_inclusion.html')">local file inclusion</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Web_Exploits--XML_External_Entities.html')">XML External Entities</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Web_Exploits--LFI_Into_Log_Poisoning.html')">LFI Into Log Poisoning</a></li>
 </ul>
 <li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Penetration_Testing_Tools.html')">Penetration Testing Tools</a></li><ul class='subtree'>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Penetration_Testing_Tools--crackmapexec.html')">crackmapexec</a></li>
@@ -130,6 +133,9 @@
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Linux_Commands--xfreerdp--ss.html')">ss</a></li>
 </ul>
 </ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Android.html')">Android</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Android--anbox_&_adb.html')">anbox & adb</a></li>
+</ul>
 <li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Active_Directory.html')">Active Directory</a></li><ul class='subtree'>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Active_Directory--Concepts.html')">Concepts</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Active_Directory--Hands_on.html')">Hands on</a></li>
@@ -163,6 +169,12 @@
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Reverse_Engineering--Buffer_Overflow_GDB.html')">Buffer Overflow GDB</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Reverse_Engineering--Buffer_Overflow_Using_ID_&_mona.html')">Buffer Overflow Using ID & mona</a></li>
 </ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Steganography.html')">Steganography</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Steganography--binwalk.html')">binwalk</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Steganography--steghide.html')">steghide</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Steganography--exiftool.html')">exiftool</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Steganography--npiet.html')">npiet</a></li>
+</ul>
 <li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Wiki_Miscellaneous.html')">Wiki Miscellaneous</a></li><ul class='subtree'>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Wiki_Miscellaneous--General_Ports_Guide.html')">General Ports Guide</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Wiki_Miscellaneous--Mail_Server.html')">Mail Server</a></li>
@@ -170,31 +182,7 @@
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Wiki_Miscellaneous--XSS_Polyglot.html')">XSS Polyglot</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Wiki_Miscellaneous--MySQL.html')">MySQL</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Wiki_Miscellaneous--Linux_Containers.html')">Linux Containers</a></li>
-</ul>
-<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog.html')">THM Blog</a></li><ul class='subtree'>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--vulnversity.html')">vulnversity</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--kenobi.html')">kenobi</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--steel_mountain.html')">steel mountain</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--alfred.html')">alfred</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--hackpark.html')">hackpark</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--game_zone.html')">game zone</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--skynet.html')">skynet</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--daily_bugle.html')">daily bugle</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--overpass-2_hacked.html')">overpass-2 hacked</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--relevant.html')">relevant</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--internal.html')">internal</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--brainstorm.html')">brainstorm</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--gatekeeper.html')">gatekeeper</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--brainpan.html')">brainpan</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--attacktive_directory.html')">attacktive directory</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--corp.html')">corp</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--mr_robot_ctf.html')">mr robot ctf</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--retro.html')">retro</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--bolt.html')">bolt</a></li>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--THM_Blog--blog.html')">blog</a></li>
-</ul>
-<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--HTB_Blog.html')">HTB Blog</a></li><ul class='subtree'>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--HTB_Blog--late.html')">late</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Wiki_Miscellaneous--Xerosploit_Installation.html')">Xerosploit Installation</a></li>
 </ul>
 </ul>
 </ul>
