@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>smbserver</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>smbserver</h1><br/><strong><h2>SMB Share in Local Machine</h2></strong><br /><br />For SMB, we can use impacket&#39;s smbserver.py to start a simple SMB server with a network share in the current directory of our AttackBox:<br /><br /><em><br />Kali Linux</em><br /><strong>mkdir share</strong><br /><strong>python3.9 /opt/impacket/examples/smbserver.py -smb2support -username THMBackup -password CopyMaster555 public share</strong><br />        <br /><br />This will <strong>create</strong> a share named <strong>public</strong> pointing to the share directory, which <strong>requires</strong> the <strong>username</strong> and <strong>password</strong> of our <strong>current windows session</strong>.<br /><br /><br /><strong>Example:</strong><br />On Kali<br /><img src="images/214-1.png" alt="images/214-1.png" /><br /><br />On Target Windows<br /><img src="images/214-2.png" alt="images/214-2.png" /><br /><br /><br />We can even open the same in the explorer by using: <strong>\\10.11.72.31\CybeXRay</strong><br /><img src="images/214-3.png" alt="images/214-3.png" /><br /><br />Now, Verify in Kali<br /><img src="images/214-4.png" alt="images/214-4.png" /></div>
+</body>
+</html>

@@ -11,8 +11,8 @@
 <div class='tree-panel'>
 <div class='tree'>
 <p>
-<strong>Index</strong></br>
 <strong><h2><a class="nav-link" href="../index.html">Home</a></strong></br></h2>
+<strong>Index</strong></br>
 <button onclick='expandAllSubtrees()'>Expand All</button> <button onclick='collapseAllSubtrees()'>Collapse All</button>
 </p>
 <ul class='outermost'>
@@ -27,6 +27,10 @@
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Connection_Tools--tftp.html')">tftp</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Connection_Tools--ssh.html')">ssh</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Connection_Tools--xfreerdp.html')">xfreerdp</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Connection_Tools--rdesktop.html')">rdesktop</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Connection_Tools--nfs.html')">nfs</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Connection_Tools--winexe.html')">winexe</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Connection_Tools--pth-winexe.html')">pth-winexe</a></li>
 </ul>
 <li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Network_Scanning.html')">Network Scanning</a></li><ul class='subtree'>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Network_Scanning--nmap.html')">nmap</a></li>
@@ -58,6 +62,8 @@
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Cryptography--hex_dump.html')">hex dump</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Cryptography--base_64_decoding.html')">base 64 decoding</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Cryptography--openssl.html')">openssl</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Cryptography--mkpasswd.html')">mkpasswd</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Cryptography--gpg.html')">gpg</a></li>
 </ul>
 <li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Samba.html')">Samba</a></li><ul class='subtree'>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Samba--smbclient.html')">smbclient</a></li>
@@ -70,11 +76,15 @@
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Web_Exploits--SQL_Injection--Manual.html')">Manual</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Web_Exploits--SQL_Injection--Sqlmap.html')">Sqlmap</a></li>
 </ul>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Web_Exploits--local_file_inclusion.html')">local file inclusion</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Web_Exploits--local_file_inclusion_(LFI).html')">local file inclusion (LFI)</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Web_Exploits--XML_External_Entities.html')">XML External Entities</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Web_Exploits--LFI_Into_Log_Poisoning.html')">LFI Into Log Poisoning</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Web_Exploits--Cookie_Forgery.html')">Cookie Forgery</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Web_Exploits--PHP_Cookie_Grabber.html')">PHP Cookie Grabber</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Web_Exploits--XSS_Cross_Site_Scripting.html')">XSS Cross Site Scripting</a></li>
 </ul>
 <li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Penetration_Testing_Tools.html')">Penetration Testing Tools</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Penetration_Testing_Tools--accesschk.html')">accesschk</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Penetration_Testing_Tools--crackmapexec.html')">crackmapexec</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Penetration_Testing_Tools--responder.html')">responder</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Penetration_Testing_Tools--evil-winrm.html')">evil-winrm</a></li>
@@ -84,6 +94,7 @@
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Penetration_Testing_Tools--Impacket_Toolkit--GetNPUsers.py.html')">GetNPUsers.py</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Penetration_Testing_Tools--Impacket_Toolkit--secretsdump.html')">secretsdump</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Penetration_Testing_Tools--Impacket_Toolkit--GetUserSPNs.html')">GetUserSPNs</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Penetration_Testing_Tools--Impacket_Toolkit--smbserver.html')">smbserver</a></li>
 </ul>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Penetration_Testing_Tools--kerbrute.html')">kerbrute</a></li>
 </ul>
@@ -110,9 +121,32 @@
 <li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation.html')">Prevelege Escalation</a></li><ul class='subtree'>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Linux.html')">Linux</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Windows.html')">Windows</a></li>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Windows_Modular_Refreshed.html')">Windows Modular Refreshed</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Passwords.html')">Passwords</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Quick_Wins.html')">Quick Wins</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Abusing_Service_Misconfigurations.html')">Abusing Service Misconfigurations</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Abusing_Dangerous_Privileges.html')">Abusing Dangerous Privileges</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Abusing_Vulnerable_Software.html')">Abusing Vulnerable Software</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Registry.html')">Registry</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Insecure_GUI_Apps.html')">Insecure GUI Apps</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Start_Up_Apps.html')">Start Up Apps</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Tools_of_Trade.html')">Tools of Trade</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Linux_Modular_Refreshed.html')">Linux Modular Refreshed</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--Service_Exploits.html')">Service Exploits</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--Weak_File_Permissions.html')">Weak File Permissions</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--Sudo.html')">Sudo</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--Cron_jobs.html')">Cron jobs</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--SUID_-_SGID_Executables.html')">SUID / SGID Executables</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--Passwords_&_Keys.html')">Passwords & Keys</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--NFS.html')">NFS</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--Kernel_Exploits.html')">Kernel Exploits</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--Privelege_Escalation_Scripts.html')">Privelege Escalation Scripts</a></li>
+</ul>
 </ul>
 <li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Windows_Commands.html')">Windows Commands</a></li><ul class='subtree'>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Windows_Commands--finding.html')">finding</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Windows_Commands--grepping_in_windows.html')">grepping in windows</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Windows_Commands--type.html')">type</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Windows_Commands--netstat.html')">netstat</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Windows_Commands--tree.html')">tree</a></li>
@@ -124,14 +158,14 @@
 <li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Linux_Commands.html')">Linux Commands</a></li><ul class='subtree'>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Linux_Commands--Default_Terminal_Mapping.html')">Default Terminal Mapping</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Linux_Commands--bash_&_zsh_Shortcuts.html')">bash & zsh Shortcuts</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Linux_Commands--cronjob.html')">cronjob</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Linux_Commands--ps.html')">ps</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Linux_Commands--tcpdump.html')">tcpdump</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Linux_Commands--tree.html')">tree</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Linux_Commands--netstat.html')">netstat</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Linux_Commands--find.html')">find</a></li>
-<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Linux_Commands--xfreerdp.html')">xfreerdp</a></li><ul class='subtree'>
-<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Linux_Commands--xfreerdp--ss.html')">ss</a></li>
-</ul>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Linux_Commands--xfreerdp.html')">xfreerdp</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Linux_Commands--ss.html')">ss</a></li>
 </ul>
 <li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_Guides--Android.html')">Android</a></li><ul class='subtree'>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Android--anbox_&_adb.html')">anbox & adb</a></li>
@@ -183,6 +217,7 @@
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Wiki_Miscellaneous--MySQL.html')">MySQL</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Wiki_Miscellaneous--Linux_Containers.html')">Linux Containers</a></li>
 <li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Wiki_Miscellaneous--Xerosploit_Installation.html')">Xerosploit Installation</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_Guides--Wiki_Miscellaneous--StrongRoot.html')">StrongRoot</a></li>
 </ul>
 </ul>
 </ul>

