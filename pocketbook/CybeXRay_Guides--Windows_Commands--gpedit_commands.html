@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>gpedit commands</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>gpedit commands</h1><br/><strong><h1>GPEdit Commands Using Powershell:</h1></strong><br /><br /><br /><strong>Note:</strong> Registry and GPEdit are complimentary, thus changes are reflected in both of them.<br /><strong>Note:</strong> GPEdit doesn&#39;t have command line settings, thus we ideally change the corresponding registry key. <br /><br /><strong>Searching the Corresponding Registry key for a GPEdit Option:</strong><br /><br />Reference: <strong>https://gpsearch.azurewebsites.net/</strong><br />Either search in the search box or select from the components in the left. Once the corresponding registry key is found. We can use the following set &amp; view it in <strong>Powershell</strong><br /><br />Reference: <strong>https://docs.microsoft.com/en-us/powershell/module/grouppolicy/?view=windowsserver2022-ps</strong><br /><br /><strong>Get-GPRegistryValue<br />Set-GPRegistryValue</strong><br /><br /><br />Eg. <br /><br /><em>Get-GPRegistryValue -Name TestGPO -Key &quot;HKEY_CURRENT_USER\Software\Policies\Microsoft\ExampleKey&quot; -ValueName &quot;ValueOne&quot;</em><br /><br /><em>Set-GPRegistryValue -Name &quot;TestGPO&quot; -Key &quot;HKCU\Software\Policies\Microsoft\Windows\Control Panel\Desktop&quot; -ValueName &quot;ScreenSaveTimeOut&quot; -Type DWORD -Value 900</em></div>
+</body>
+</html>

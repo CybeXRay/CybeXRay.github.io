@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Simple Get Request</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Simple Get Request</h1><br/><strong><h1>Simple Get Request</h1></strong><br /><br /><strong>Example</strong><br />import requests<br /><br /># Fetching 2 pdf&#39;s file which cause SHA-1 collision<br /><br />pdf1 = requests.get(&quot;http://localhost/messageA&quot;)<br />pdf2 = requests.get(&quot;http://localhost/messageB&quot;)<br /><br /># Assinging pdf&#39;s content into the GET parameters<br /><br />params = {&#39;user&#39;: pdf1.content, &#39;pass&#39;: pdf2.content}<br />r = requests.get(&quot;http://fortress:7331/t3mple_0f_y0ur_51n5.php/&quot;,params=params)<br />print(r.text)</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>dpkg</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>dpkg</h1><br/><strong><h1>Installing &amp; Removing Deb Files</h1></strong><br /><br /><strong>Install Package</strong><br /><br />dpkg -i package_name.deb<br /><br /><strong>Search Pacakges</strong><br /><br />dpkg -s package_name<br />ls -l /var/lib/dpkg/info | grep package_name<br /><br /><strong>Remove Package(Keeps Configuration &amp; install History)<br /></strong><br />dpkg -r package_name<br />dpkg --remove package_name<br /><br /><strong>Completely Remove Package</strong><br /><br />dpkg --purge package_name</div>
+</body>
+</html>
