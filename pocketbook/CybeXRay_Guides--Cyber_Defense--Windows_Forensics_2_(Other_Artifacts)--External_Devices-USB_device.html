@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>External Devices/USB device</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>External Devices/USB device</h1><br/><strong><h1>External Devices/USB device forensics</h1></strong><br /><br /><br /><strong><h3>Setupapi dev logs for USB devices</h3></strong><br /><br />When any new device is attached to a system, information related to the setup of that device is stored in the setupapi.dev.log. This log is present at the following location:<br /><br /><strong>C:\Windows\inf\setupapi.dev.log</strong><br /><br />This log contains the device serial number and the first/last times when the device was connected. <br /><br /><br /><br /><strong><h3>Shortcut files</h3></strong><br /><br />As we learned in the previous task, shortcut files are created automatically by Windows for files opened locally or remotely. These shortcut files can sometimes provide us with information about connected USB devices. It can provide us with information about the volume name, type, and serial number. Recalling from the previous task, this information can be found at:<br /><br /><strong>C:\Users\&lt;username&gt;\AppData\Roaming\Microsoft\Windows\Recent\</strong><br /><br /><strong>C:\Users\&lt;username&gt;\AppData\Roaming\Microsoft\Office\Recent\</strong><br /><br /><br />We have already learned about parsing Shortcut files using Eric Zimmerman&#39;s <strong>LECmd.exe</strong> in a previous task<br />We can use the following command to parse shortcut files using LECmd.exe:<br /><br /><strong>LECmd.exe -f &lt;path-to-shortcut-files&gt; --csv &lt;path-to-save-csv&gt;</strong><br /><br />The creation date of the shortcut file points to the date/time when the file was first opened. The date/time of modification of the shortcut file points to the last time the file was accessed.</div>
+</body>
+</html>

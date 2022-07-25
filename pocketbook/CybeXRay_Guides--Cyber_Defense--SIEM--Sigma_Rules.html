@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Sigma Rules</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Sigma Rules</h1><br/><strong><h1>Sigma Rules</h1></strong><br /><br />Florian Roth created Sigma. <br /><br />What is Sigma?<br /><br /> As per the GitHub repo, &quot;Sigma is a generic and open signature format that allows you to describe relevant log events in a straightforward manner. The rule format is very flexible, easy to write and applicable to any type of log file. The main purpose of this project is to provide a structured form in which researchers or analysts can describe their once developed detection methods and make them shareable with others.&quot;<br /> <br /> Link: <a href="https://github.com/Neo23x0/sigma">https://github.com/Neo23x0/sigma</a><br /> <br /> <br /> Some supported target SIEMs:<br /><br />    Splunk<br />    Microsoft Defender Advanced Threat Protection<br />    Azure Sentinel<br />    ArcSight<br />    QRadar<br /><br />Some projects/products that use Sigma:<br /><br />    MISP<br />    THOR<br />    Joe Sandbox<br /><br />There also is a Splunk app titled TA-Sigma-Searches. <br />Sigma rules are written in YAML (YAML Ain&#39;t Markup Language). <br /> <br /> <br /> The Sigma repo has signatures in the rules folder. Sigmac, the Sigma Converter, located in the tools folder, can generate a specific SIEM rule. <br /><span style="text-decoration:underline;">Example</span><strong>:</strong> <strong>./sigmac -t splunk -c tools/config/generic/sysmon.yml ./rules/windows/process_creation/win_susp_whoami.yml</strong><br /><br />Online Website for Generating Sigma Rules for various SIEMs: <a href="https://uncoder.io/">https://uncoder.io/</a><br /><br /></div>
+</body>
+</html>
