@@ -1,0 +1,381 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>OSCP Guide</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='two-panels'>
+<div class='tree-panel'>
+<div class='tree'>
+<p>
+<strong>Index</strong></br>
+<button onclick='expandAllSubtrees()'>Expand All</button> <button onclick='collapseAllSubtrees()'>Collapse All</button>
+</p>
+<ul class='outermost'>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides.html')">CybeXRay OSCP Guides</a></li><ul class='subtree'>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Connection_Tools.html')">Connection Tools</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Connection_Tools--OpenVPN.html')">OpenVPN</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Connection_Tools--telnet.html')">telnet</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Connection_Tools--ftp.html')">ftp</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Connection_Tools--ProFTPd_(Vulnerable).html')">ProFTPd (Vulnerable)</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Connection_Tools--netcat.html')">netcat</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Connection_Tools--socat.html')">socat</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Connection_Tools--tftp.html')">tftp</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Connection_Tools--ssh.html')">ssh</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Connection_Tools--xfreerdp.html')">xfreerdp</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Connection_Tools--rdesktop.html')">rdesktop</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Connection_Tools--nfs.html')">nfs</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Connection_Tools--winexe.html')">winexe</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Connection_Tools--pth-winexe.html')">pth-winexe</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Network_Scanning.html')">Network Scanning</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Network_Scanning--nmap.html')">nmap</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Network_Scanning--rustscan.html')">rustscan</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Network_Scanning--traceroute.html')">traceroute</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Network_Scanning--whois.html')">whois</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Network_Scanning--arin.html')">arin</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Network_Scanning--dig.html')">dig</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Network_Scanning--tcpdump.html')">tcpdump</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Network_Scanning--wireshark.html')">wireshark</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web,DNS_&_VHost_Enumeration.html')">Web,DNS & VHost Enumeration</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web,DNS_&_VHost_Enumeration--curl_&_dns.html')">curl & dns</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web,DNS_&_VHost_Enumeration--gobuster.html')">gobuster</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web,DNS_&_VHost_Enumeration--dirsearch.html')">dirsearch</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web,DNS_&_VHost_Enumeration--ffuf.html')">ffuf</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web,DNS_&_VHost_Enumeration--wfuzz.html')">wfuzz</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web,DNS_&_VHost_Enumeration--dnsrecon.html')">dnsrecon</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web,DNS_&_VHost_Enumeration--dirb.html')">dirb</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web,DNS_&_VHost_Enumeration--sublist3r.html')">sublist3r</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web,DNS_&_VHost_Enumeration--burpsuite.html')">burpsuite</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web,DNS_&_VHost_Enumeration--cookies.html')">cookies</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web,DNS_&_VHost_Enumeration--cookie_editor.html')">cookie editor</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web,DNS_&_VHost_Enumeration--wappalyzer.html')">wappalyzer</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web,DNS_&_VHost_Enumeration--whatweb.html')">whatweb</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web,DNS_&_VHost_Enumeration--wpscan.html')">wpscan</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web,DNS_&_VHost_Enumeration--joomla_version_check.html')">joomla version check</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cryptography.html')">Cryptography</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cryptography--Weak_RSA.html')">Weak RSA</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cryptography--Decryption_using_openssl.html')">Decryption using openssl</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cryptography--hydra.html')">hydra</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cryptography--john_the_ripper.html')">john the ripper</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cryptography--john_custom_rules.html')">john custom rules</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cryptography--fcrackzip.html')">fcrackzip</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cryptography--hashcat_&_hashid.html')">hashcat & hashid</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cryptography--xxd_-_hex_dump.html')">xxd - hex dump</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cryptography--base_64_decoding.html')">base 64 decoding</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cryptography--openssl.html')">openssl</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cryptography--mkpasswd.html')">mkpasswd</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cryptography--gpg.html')">gpg</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Databases.html')">Databases</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Databases--MySQL.html')">MySQL</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Databases--SQLITE.html')">SQLITE</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Databases--Mongo.html')">Mongo</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Samba.html')">Samba</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Samba--enum4linux.html')">enum4linux</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Samba--smbclient.html')">smbclient</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Samba--smbmap.html')">smbmap</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Samba--smbget.html')">smbget</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Samba--ms17-010.html')">ms17-010</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Samba--nmap_script.html')">nmap script</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web_Exploits.html')">Web Exploits</a></li><ul class='subtree'>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web_Exploits--SQL_Injection.html')">SQL Injection</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web_Exploits--SQL_Injection--Manual.html')">Manual</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web_Exploits--SQL_Injection--Sqlmap.html')">Sqlmap</a></li>
+</ul>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web_Exploits--local_file_inclusion_(LFI).html')">local file inclusion (LFI)</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web_Exploits--XML_External_Entities.html')">XML External Entities</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web_Exploits--LFI_Into_Log_Poisoning.html')">LFI Into Log Poisoning</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web_Exploits--Cookie_Forgery.html')">Cookie Forgery</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web_Exploits--PHP_Cookie_Grabber.html')">PHP Cookie Grabber</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web_Exploits--XSS_Cross_Site_Scripting.html')">XSS Cross Site Scripting</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web_Exploits--OWASP_Top_10.html')">OWASP Top 10</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Web_Exploits--Upload_Vulnerabilities.html')">Upload Vulnerabilities</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Penetration_Testing_Tools.html')">Penetration Testing Tools</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Penetration_Testing_Tools--accesschk.html')">accesschk</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Penetration_Testing_Tools--crackmapexec.html')">crackmapexec</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Penetration_Testing_Tools--responder.html')">responder</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Penetration_Testing_Tools--evil-winrm.html')">evil-winrm</a></li>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Penetration_Testing_Tools--Impacket_Toolkit.html')">Impacket Toolkit</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Penetration_Testing_Tools--Impacket_Toolkit--mssqlclient.html')">mssqlclient</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Penetration_Testing_Tools--Impacket_Toolkit--psexec.html')">psexec</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Penetration_Testing_Tools--Impacket_Toolkit--GetNPUsers.py.html')">GetNPUsers.py</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Penetration_Testing_Tools--Impacket_Toolkit--secretsdump.html')">secretsdump</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Penetration_Testing_Tools--Impacket_Toolkit--GetUserSPNs.html')">GetUserSPNs</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Penetration_Testing_Tools--Impacket_Toolkit--smbserver.html')">smbserver</a></li>
+</ul>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Penetration_Testing_Tools--kerbrute.html')">kerbrute</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Python.html')">Python</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Python--wine.html')">wine</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Python--TCP_Authentication_Server.html')">TCP Authentication Server</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Python--Simple_Get_Request.html')">Simple Get Request</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Python--Virtual_Environment.html')">Virtual Environment</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Metasploit.html')">Metasploit</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Metasploit--msfvenom.html')">msfvenom</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Metasploit--msfconsole.html')">msfconsole</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Metasploit--meterpreter.html')">meterpreter</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Metasploit--searchsploit.html')">searchsploit</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Metasploit--persistence.html')">persistence</a></li>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Metasploit--Custom_Usages.html')">Custom Usages</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Metasploit--Custom_Usages--samba_username_map.html')">samba username map</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Metasploit--Custom_Usages--tomcat_&_coyote.html')">tomcat & coyote</a></li>
+</ul>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Shells.html')">Shells</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Shells--Shell_Beautify.html')">Shell Beautify</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Shells--Common_Shell_Payloads.html')">Common Shell Payloads</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Shells--Webshells.html')">Webshells</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Shells--PHP_Reverse_Shell.html')">PHP Reverse Shell</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Shells--Ruby_Reverse_Shell.html')">Ruby Reverse Shell</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Shells--Tmux.html')">Tmux</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation.html')">Prevelege Escalation</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Linux.html')">Linux</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Windows.html')">Windows</a></li>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Windows_Modular_Refreshed.html')">Windows Modular Refreshed</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Passwords.html')">Passwords</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Quick_Wins.html')">Quick Wins</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Abusing_Service_Misconfigurations.html')">Abusing Service Misconfigurations</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Abusing_Dangerous_Privileges.html')">Abusing Dangerous Privileges</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Abusing_Vulnerable_Software.html')">Abusing Vulnerable Software</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Registry.html')">Registry</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Insecure_GUI_Apps.html')">Insecure GUI Apps</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Start_Up_Apps.html')">Start Up Apps</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Windows_Modular_Refreshed--Tools_of_Trade.html')">Tools of Trade</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Linux_Modular_Refreshed.html')">Linux Modular Refreshed</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--Service_Exploits.html')">Service Exploits</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--Weak_File_Permissions.html')">Weak File Permissions</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--Sudo.html')">Sudo</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--Cron_jobs.html')">Cron jobs</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--SUID_-_SGID_Executables.html')">SUID / SGID Executables</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--Passwords_&_Keys.html')">Passwords & Keys</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--NFS.html')">NFS</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--Kernel_Exploits.html')">Kernel Exploits</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Linux_Modular_Refreshed--Privelege_Escalation_Scripts.html')">Privelege Escalation Scripts</a></li>
+</ul>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Prevelege_Escalation--Bypassing_Windows_Defender.html')">Bypassing Windows Defender</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands.html')">Windows Commands</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--alternate_data_streams.html')">alternate data streams</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--finding.html')">finding</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--grepping_in_windows.html')">grepping in windows</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--processes.html')">processes</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--type.html')">type</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--netstat.html')">netstat</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--tree.html')">tree</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--Genral_Commands.html')">Genral Commands</a></li>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--powershell.html')">powershell</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--powershell--powershell_general.html')">powershell general</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--powershell--powershell_enumeration.html')">powershell enumeration</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--powershell--powershell_scripting.html')">powershell scripting</a></li>
+</ul>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--registry_commands.html')">registry commands</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--gpedit_commands.html')">gpedit commands</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--windows_defender.html')">windows defender</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--groups_&_features.html')">groups & features</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--user_add-modify.html')">user add/modify</a></li>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--sysinternals.html')">sysinternals</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--sysinternals--Intro_&_setup.html')">Intro & setup</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--sysinternals--file_&_disk_utilities.html')">file & disk utilities</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--sysinternals--network_utilities.html')">network utilities</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--sysinternals--process_utilities.html')">process utilities</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--sysinternals--security_utilities_(sysmon).html')">security utilities (sysmon)</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--sysinternals--system_information.html')">system information</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--sysinternals--miscellaneous.html')">miscellaneous</a></li>
+</ul>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Windows_Commands--windows_event_logs.html')">windows event logs</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Linux_Commands.html')">Linux Commands</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Linux_Commands--Default_Terminal_Mapping.html')">Default Terminal Mapping</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Linux_Commands--bash_&_zsh_Shortcuts.html')">bash & zsh Shortcuts</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Linux_Commands--Information_Gathering.html')">Information Gathering</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Linux_Commands--cronjob.html')">cronjob</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Linux_Commands--ps.html')">ps</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Linux_Commands--tree.html')">tree</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Linux_Commands--netstat.html')">netstat</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Linux_Commands--ss.html')">ss</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Linux_Commands--find.html')">find</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Linux_Commands--xfreerdp.html')">xfreerdp</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Linux_Commands--ss.html')">ss</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Linux_Commands--grep.html')">grep</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Linux_Commands--dpkg.html')">dpkg</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Linux_Commands--Ip_address.html')">Ip address</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Android.html')">Android</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Android--anbox_&_adb.html')">anbox & adb</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory.html')">Active Directory</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Concepts.html')">Concepts</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Hands_on.html')">Hands on</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Attacking_Kerberos.html')">Attacking Kerberos</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Kerberoasting_with_Powershell.html')">Kerberoasting with Powershell</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--AS-REP_Roasting.html')">AS-REP Roasting</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Pass_the_Ticket_with_mimikatz.html')">Pass the Ticket with mimikatz</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Golden-Silver_Ticket_Attack.html')">Golden/Silver Ticket Attack</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Kerberos_Backdoor.html')">Kerberos Backdoor</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Post_Exploitation_Basics.html')">Post Exploitation Basics</a></li>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Tools.html')">Tools</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Tools--Rubeus.html')">Rubeus</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Tools--mimikatz.html')">mimikatz</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Tools--Powerview.html')">Powerview</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Tools--Bloodhound.html')">Bloodhound</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Tools--password_sprayer.py.html')">password_sprayer.py</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Tools--runas.html')">runas</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Tools--kekeo.html')">kekeo</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Tools--winrs_&_PSSession.html')">winrs & PSSession</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Tools--ForgeCert.html')">ForgeCert</a></li>
+</ul>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--genric_commands.html')">genric commands</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Active_Directory--Resources.html')">Resources</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks.html')">Compromising AD Networks</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Basics_THM.html')">Basics THM</a></li>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Breaching_Active_Directory.html')">Breaching Active Directory</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Breaching_Active_Directory--OSINT_&_Phishing.html')">OSINT & Phishing</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Breaching_Active_Directory--NTLM_Authenticated_Services.html')">NTLM Authenticated Services</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Breaching_Active_Directory--LDAP_Bind_Credentials.html')">LDAP Bind Credentials</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Breaching_Active_Directory--Authentication_Relays.html')">Authentication Relays</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Breaching_Active_Directory--Microsoft_Deployment_Toolkit.html')">Microsoft Deployment Toolkit</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Breaching_Active_Directory--Configuration_Files_(Database).html')">Configuration Files (Database)</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Enumerating_Active_Directory.html')">Enumerating Active Directory</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Enumerating_Active_Directory--Credential_Injection.html')">Credential Injection</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Enumerating_Active_Directory--Using_MMC.html')">Using MMC</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Enumerating_Active_Directory--Using_CMD.html')">Using CMD</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Enumerating_Active_Directory--Using_Powershell.html')">Using Powershell</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Enumerating_Active_Directory--Using_Bloodhound.html')">Using Bloodhound</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Enumerating_Active_Directory--Conclusion_&_Referneces.html')">Conclusion & Referneces</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Lateral_Movement_&_Pivoting.html')">Lateral Movement & Pivoting</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Lateral_Movement_&_Pivoting--Spawning_Process_Remotely.html')">Spawning Process Remotely</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Lateral_Movement_&_Pivoting--Moving_Laterally_using_WMI.html')">Moving Laterally using WMI</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Lateral_Movement_&_Pivoting--Alternate_Authentication.html')">Alternate Authentication</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Lateral_Movement_&_Pivoting--Abusing_User_Behaviour.html')">Abusing User Behaviour</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Lateral_Movement_&_Pivoting--Port_Forwarding.html')">Port Forwarding</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Exploiting_Active_Directory.html')">Exploiting Active Directory</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Exploiting_Active_Directory--Permission_Delegation.html')">Permission Delegation</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Exploiting_Active_Directory--Kerberos_Delegation.html')">Kerberos Delegation</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Exploiting_Active_Directory--Automatic_Relays.html')">Automatic Relays</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Exploiting_Active_Directory--AD_Users.html')">AD Users</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Exploiting_Active_Directory--GPOs.html')">GPOs</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Exploiting_Active_Directory--Certificates.html')">Certificates</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Exploiting_Active_Directory--Domain_Trusts.html')">Domain Trusts</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Exploiting_Active_Directory--Conclusion_&_Mitigations.html')">Conclusion & Mitigations</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Persisting_Active_Directory.html')">Persisting Active Directory</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Persisting_Active_Directory--Credentials.html')">Credentials</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Persisting_Active_Directory--Tickets.html')">Tickets</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Persisting_Active_Directory--Certificates.html')">Certificates</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Persisting_Active_Directory--SID_History.html')">SID History</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Persisting_Active_Directory--Group_Membership.html')">Group Membership</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Persisting_Active_Directory--ACLs.html')">ACLs</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Persisting_Active_Directory--GPOs.html')">GPOs</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Persisting_Active_Directory--Conclusion_&_Mitigations.html')">Conclusion & Mitigations</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Credential_Harvesting.html')">Credential Harvesting</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Credential_Harvesting--Crdential_Access.html')">Crdential Access</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Credential_Harvesting--Local_Windows_Creds.html')">Local Windows Creds</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Credential_Harvesting--LSASS.html')">LSASS</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Credential_Harvesting--Windows_Credential_Manager.html')">Windows Credential Manager</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Credential_Harvesting--Domain_Controller.html')">Domain Controller</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Credential_Harvesting--LAPS.html')">LAPS</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Credential_Harvesting--Other_Attacks.html')">Other Attacks</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Compromising_AD_Networks--Credential_Harvesting--Conclusion.html')">Conclusion</a></li>
+</ul>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Application_Exploits.html')">Application Exploits</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Application_Exploits--jenkins.html')">jenkins</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Application_Exploits--unify.html')">unify</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Application_Exploits--mongo_db.html')">mongo db</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Application_Exploits--ona-rce.html')">ona-rce</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Reverse_Engineering.html')">Reverse Engineering</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Reverse_Engineering--Windows_x64_Assembly.html')">Windows x64 Assembly</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Reverse_Engineering--Assembly_Instrcutions.html')">Assembly Instrcutions</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Reverse_Engineering--Memory_Layout.html')">Memory Layout</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Reverse_Engineering--Windows_Reversing.html')">Windows Reversing</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Reverse_Engineering--Buffer_Overflow_GDB.html')">Buffer Overflow GDB</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Reverse_Engineering--Buffer_Overflow_Using_ID_&_mona.html')">Buffer Overflow Using ID & mona</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Reverse_Engineering--radare2.html')">radare2</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Steganography.html')">Steganography</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Steganography--binwalk.html')">binwalk</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Steganography--steghide.html')">steghide</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Steganography--exiftool.html')">exiftool</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Steganography--npiet.html')">npiet</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Steganography--pdfinfo.html')">pdfinfo</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense.html')">Cyber Defense</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--MITRE.html')">MITRE</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--YARA.html')">YARA</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Intro_to_ISAC.html')">Intro to ISAC</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Osquery.html')">Osquery</a></li>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--SIEM.html')">SIEM</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--SIEM--general.html')">general</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--SIEM--Splunk.html')">Splunk</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--SIEM--Sigma_Rules.html')">Sigma Rules</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--SIEM--keywords_in_search.html')">keywords in search</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Forensics_Tools.html')">Forensics Tools</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Forensics_Tools--volatility_(Memory).html')">volatility (Memory)</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Forensics_Tools--Redline.html')">Redline</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Forensics_Tools--Autopsy.html')">Autopsy</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Forensics_Tools--KAPE.html')">KAPE</a></li>
+</ul>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Investigating_Windows.html')">Investigating Windows</a></li>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Windows_Forensics_1_(Registry).html')">Windows Forensics 1 (Registry)</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Windows_Forensics_1_(Registry)--Windows_Registry_Basics.html')">Windows Registry Basics</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Windows_Forensics_1_(Registry)--Data_Aquisition-Collectors.html')">Data Aquisition/Collectors</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Windows_Forensics_1_(Registry)--Registry_Viewing_Tools.html')">Registry Viewing Tools</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Windows_Forensics_1_(Registry)--System_Information_&_Accounts.html')">System Information & Accounts</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Windows_Forensics_1_(Registry)--Enumeration_of_Files-Folders.html')">Enumeration of Files/Folders</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Windows_Forensics_1_(Registry)--Evidence_of_Execution.html')">Evidence of Execution</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Windows_Forensics_1_(Registry)--External_Devices-USB_device.html')">External Devices/USB device</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Windows_Forensics_2_(Other_Artifacts).html')">Windows Forensics 2 (Other Artifacts)</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Windows_Forensics_2_(Other_Artifacts)--The_FAT_File_System.html')">The FAT File System</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Windows_Forensics_2_(Other_Artifacts)--The_NTFS_File_System.html')">The NTFS File System</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Windows_Forensics_2_(Other_Artifacts)--Recovering_Deleted_Files.html')">Recovering Deleted Files</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Windows_Forensics_2_(Other_Artifacts)--Evidence_of_Execution.html')">Evidence of Execution</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Windows_Forensics_2_(Other_Artifacts)--File-Folder_Knowledge.html')">File/Folder Knowledge</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Cyber_Defense--Windows_Forensics_2_(Other_Artifacts)--External_Devices-USB_device.html')">External Devices/USB device</a></li>
+</ul>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Malware_Analysis.html')">Malware Analysis</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Malware_Analysis--Introduction.html')">Introduction</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Malware_Analysis--Strings.html')">Strings</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Malware_Analysis--REMnux.html')">REMnux</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Wiki_Miscellaneous.html')">Wiki Miscellaneous</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Wiki_Miscellaneous--General_Ports_Guide.html')">General Ports Guide</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Wiki_Miscellaneous--Mail_Server.html')">Mail Server</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Wiki_Miscellaneous--SQL_Basic_Commands.html')">SQL Basic Commands</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Wiki_Miscellaneous--XSS_Polyglot.html')">XSS Polyglot</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Wiki_Miscellaneous--SQL.html')">SQL</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Wiki_Miscellaneous--Linux_Containers.html')">Linux Containers</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Wiki_Miscellaneous--Xerosploit_Installation.html')">Xerosploit Installation</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Wiki_Miscellaneous--StrongRoot.html')">StrongRoot</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Wiki_Miscellaneous--Network_Connections_in_Kali.html')">Network Connections in Kali</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Wiki_Miscellaneous--Rogue_LDAP_Server_@Kali_Machine.html')">Rogue LDAP Server @Kali Machine</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('CybeXRay_OSCP_Guides--Wiki_Miscellaneous--Port_Forwarding.html')">Port Forwarding</a></li>
+</ul>
+</ul>
+</ul>
+</div>
+</div>
+<div class='page-panel'><iframe src='' id='page_frame'></iframe></div></div><script src='res/script3.js'></script>
+
+</body>
+</html>
