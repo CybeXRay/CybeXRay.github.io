@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>kerbrute</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>kerbrute</h1><br/><p><strong>Kerbrute</strong></p><p></p><p><strong>https://github.com/ropnop/kerbrute/releases</strong></p><p></p><p>Kerbrute has three main commands:</p><p></p><p>    bruteuser - Bruteforce a single user&#39;s password from a wordlist</p><p>    bruteforce - Read username:password combos from a file or stdin and test them</p><p>    passwordspray - Test a single password against a list of users</p><p>    userenum - Enumerate valid domain usernames via Kerberos</p><p></p><p>A domain (-d) or a domain controller (--dc) must be specified. If a Domain Controller is not given the KDC will be looked up via DNS.</p><p>By default, Kerbrute is multithreaded and uses 10 threads. This can be changed with the -t option.</p><p>Output is logged to stdout, but a log file can be specified with -o.</p><p>By default, failures are not logged, but that can be changed with -v.</p><p></p><p>Lastly, Kerbrute has a --safe option. When this option is enabled, if an account comes back as locked out, it will abort all threads to stop locking out any other accounts.</p><p></p><p>The help command can be used for more information</p><p></p><p></p><p><strong>/home/cybex/lab/AppImages/kerbrute_linux_amd64 userenum --dc 10.10.11.113 -d spookysec.local -t 100 user.txt</strong></p><p></p><p><img src="images/152-1.png" alt="images/152-1.png" /></p></div>
+</body>
+</html>

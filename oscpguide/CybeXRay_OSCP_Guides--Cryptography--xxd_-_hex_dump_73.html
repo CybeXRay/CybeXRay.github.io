@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>xxd - hex dump</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>xxd - hex dump</h1><br/><p><strong><h1>The tool to create and reverse hex dumps:</h1></strong></p><p></p><p>xxd</p><p>(man xxd for more details)</p><p></p><p></p><p><strong><span style="text-decoration:underline;">To Reverse:</span></strong></p><p></p><p>cat hex_dump_file | xxd -r &gt; output_file</p><p></p><p></p><p></p><p><strong><span style="text-decoration:underline;">To Truncate a binary to a certain number of octets &amp; output a hex dump:</span></strong></p><p>Example:</p><p><strong>xxd -l 192 shattered-1.pdf &gt; 1-pdf.192</strong></p><p><strong>xxd -l 192 shattered-2.pdf &gt; 2-pdf.192</strong></p><p></p><p><strong>-l len | -len len</strong></p><p><strong>      Stop after writing len octets.</strong></p><p></p><p></p><p></p><p><strong><span style="text-decoration:underline;">To Truncate a bianry to Hex Dump &amp; convert it back into binary:</span></strong></p><p>Example:</p><p><strong>xxd -l 320 shattered-1.pdf | xxd -r &gt; 1-pdf.320</strong></p><p><strong>xxd -l 320 shattered-2.pdf | xxd -r &gt; 2-pdf.320</strong></p><p></p><p><strong>-r | -revert</strong></p><p><strong>      Reverse operation: convert (or patch) hexdump into  binary. If not  writing</strong></p><p><strong>      to stdout, xxd writes into its output file without truncating it.</strong></p><p><strong>      Use the combination -r -p to read plain hexadecimal dumps without line number</strong></p><p><strong>      information and without a particular column layout.</strong></p><p><strong>      Additional Whitespace and line-breaks are allowed anywhere.</strong></p></div>
+</body>
+</html>

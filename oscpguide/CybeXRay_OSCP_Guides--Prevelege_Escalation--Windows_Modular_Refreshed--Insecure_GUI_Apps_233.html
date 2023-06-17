@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Insecure GUI Apps</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Insecure GUI Apps</h1><br/><p><strong><h1>Insecure GUI Apps</h1></strong></p><p></p><p></p><p></p><p>Start an RDP session as the &quot;user&quot; account:</p><p></p><p><strong>rdesktop -u user -p password321 10.10.83.22</strong></p><p></p><p>Double-click the &quot;AdminPaint&quot; shortcut on your Desktop. Once it is running, open a command prompt and note that Paint is running with admin privileges:</p><p></p><p><strong>tasklist /V | findstr mspaint.exe</strong></p><p><img src="images/233-1.png" alt="images/233-1.png" /></p><p></p><p>In Paint, click &quot;<strong>File</strong>&quot; and then &quot;<strong>Open</strong>&quot;. In the open file dialog box, click in the navigation input and paste: <strong>file://c:/windows/system32/cmd.exe</strong></p><p></p><p>Press Enter to spawn a command prompt running with admin privileges.</p><p></p><p><strong><h2>END</h2></strong></p></div>
+</body>
+</html>

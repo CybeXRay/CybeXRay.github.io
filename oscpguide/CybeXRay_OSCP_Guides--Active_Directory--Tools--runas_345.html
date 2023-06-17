@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>runas</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>runas</h1><br/><p><strong><h1>Runas</h1></strong></p><p></p><p>Native Windows Tool to Run a Program As a different User.</p><p></p><p><strong>runas.exe /netonly /user:za.tryhackme.com\jennifer.wright cmd.exe</strong></p><p></p><p>It will Prompt for a password, then spawn a <strong>cmd</strong> which will have the given user credentials in the memory.</p><p></p><p></p><p><strong><h3>Running as an User with Saved Credentials</h3></strong></p><p></p><p>Get the Details using:</p><p></p><p><strong>cmdkey /list</strong></p><p><img src="images/345-1.png" alt="images/345-1.png" /></p><p></p><p>Then,</p><p><strong>runas /savecred /user:THM.red\thm-local cmd.exe</strong></p><p></p><p><img src="images/345-2.png" alt="images/345-2.png" /></p><p></p><p>We will get a CMD as the thm-local user without any password.</p></div>
+</body>
+</html>

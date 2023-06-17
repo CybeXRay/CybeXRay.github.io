@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>nsupdate</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>nsupdate</h1><br/><p><strong><h1>nsupdate</h1></strong></p><p></p><p>Used to add/update/delete DNS records.</p><p>Example:</p><p></p><p>Let’s send a request to delete the existing A record for <strong>selfservice.windcorp.thm</strong> and then send an update add request for a new A record to have selfservice resolve to our <strong>THM IP</strong>.</p><p></p><p></p><p><strong>nsupdate</strong></p><p><strong>&gt; server 10.10.194.219</strong></p><p><strong>&gt; update delete selfservice.windcorp.thm</strong></p><p><strong>&gt; send</strong></p><p><strong>&gt; update add selfservice.windcorp.thm 1234 A 10.11.72.31</strong></p><p><strong>&gt; send</strong></p><p><strong>&gt; quit</strong></p><p></p><p><img src="images/405-1.png" alt="images/405-1.png" /></p><p></p><p></p></div>
+</body>
+</html>

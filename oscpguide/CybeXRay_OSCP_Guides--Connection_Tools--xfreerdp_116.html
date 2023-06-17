@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>xfreerdp</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>xfreerdp</h1><br/><p><strong><h1>xfreerdp</h1></strong></p><p></p><p><strong>RDP to Windows machine</strong></p><p></p><p></p><p><em>xfreerdp 	/v:ip_address	/u:username	/p:password</em></p><p></p><p><strong>Options:</strong></p><p><em>/cert:ignore </em>				--→ Ignores the certificate to avoid any error</p><p><em>/f	</em>								--→ Full screen mode</p><p><em>/dynamic-resolution</em>	--→ Better than full screen. The resolution changes according to window size.</p><p><em>+clipboard		</em>			--→ Used to copy paste clipboard items between Kali and connected Windows Machine.</p><p>/scale							--→ Used to scale windows size</p><p>+home-drive				--→ To share the home directory of local user as a network share in the remote machine</p><p>/drive:drive_name,drive_path	--→ Used to share a local directory at the drive_path to be shared in network as drive_name to the remote machine</p><p></p><p>eg.</p><p><em><strong>xfreerdp /dynamic-resolution +clipboard /cert:ignore /v:10.10.229.129 /u:administrator /p:4q6XvFES7Fdxs</strong></em></p><p><strong>xfreerdp /dynamic-resolution +clipboard /scale:140 /cert:ignore /v:10.10.56.226 /u:mayor /p:&#39;8CL7O1N78MdrCIsV&#39;</strong></p><p><strong>xfreerdp /f +clipboard /cert:ignore /scale:140 /v:10.10.226.27 /u:admin /p:password</strong></p><p><strong>xfreerdp /dynamic-resolution +clipboard +home-drive /cert:ignore /scale:140 /v:10.10.144.167 /u:thm-unpriv /p:Password321</strong></p><p><strong>xfreerdp /f +clipboard /drive:CybeXRay,/home/cybex/lab /cert:ignore /scale:140 /v:10.10.144.167 /u:thm-unpriv /p:Password321</strong></p><p></p><p></p><p><strong>Domain Connections</strong></p><p>eg.</p><p><strong>xfreerdp -f /v:10.10.103.12 /u:spookysec.local\svc-admin /cert:ignore /p:management2005</strong></p></div>
+</body>
+</html>

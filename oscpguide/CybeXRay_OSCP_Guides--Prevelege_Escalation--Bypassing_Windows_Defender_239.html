@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Bypassing Windows Defender</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Bypassing Windows Defender</h1><br/><p><strong><h1>Bypassing Windows Defender</h1></strong></p><p></p><p>If Windows defender is active we can use the metaspolit framework to bypass it. We will use web delivery of an obscutated Powershell Command which will give a meterpreter reverse shell and from there we can implement persistence.</p><p></p><p></p><p>Exploit: <strong>exploit/multi/script/web_delivery</strong></p><p></p><p>Change Default Payload from Python to PSH (Powershell)</p><p></p><p><img src="images/239-1.png" alt="images/239-1.png" /></p><p></p><p>Set payload : <strong>set payload windows/meterpreter/reverse_http</strong></p><p></p><p>Then set payload options and run the command.</p><p><img src="images/239-2.png" alt="images/239-2.png" /></p><p></p><p></p><p>We take the Powershell command &amp; run it on the target machine.</p><p></p><p></p><p><strong>Example:</strong></p><p>Following is of <strong>THM:Blaster</strong>. This machine has Windows Defender active and we are currently have <strong>NT Authority/Sytem</strong> privilege. We will use the metasploit module for <strong>backdoor creation</strong> &amp; <strong>Persistence</strong> which <strong>evades</strong> the <strong>Windows defender</strong>,</p><p></p><p><img src="images/239-3.png" alt="images/239-3.png" /></p><p></p><p></p><p>Note: Run the exploit in background, else press enter now to go to meteasploit terminal.</p><p></p><p><strong>Interact with the session</strong></p><p><strong>sessions -l </strong></p><p><strong>sessiosn -i 1</strong></p><p></p><p></p><p><strong>Note: </strong>We get a fully functional meterpreter shell even if Windows defender is active,</p><p></p><p><strong>However</strong>, persistence module won&#39;t work until windows defender is disabled.</p></div>
+</body>
+</html>

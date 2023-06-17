@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>grep</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>grep</h1><br/><p><strong><h1>Grep Commands</h1></strong></p><p></p><p><strong>Options</strong></p><p></p><p><table class="table"><tr><th>Option</th><th>Description</th><th>Example</th></tr><tr><td>-i</td><td>Perform a case insensitive search. For example, &quot;helloworld&quot; and &quot;HELLOWORLD&quot; will return the same results</td><td>grep -i &quot;helloworld&quot; log.txt and grep -i &quot;HELLOWORLD&quot; log.txt will return the same matches.</td></tr><tr><td>-E</td><td>Searches using regex (regular expressions). For example, we can search for lines that contain either &quot;thm&quot; or &quot;tryhackme&quot;</td><td>grep -E &quot;thm|tryhackme&quot; log.txt</td></tr><tr><td>-r</td><td>Search recursively. For example, search all of the files in a directory for this value.</td><td>grep -r &quot;helloworld&quot; mydirectory</td></tr></table></p><p></p><p><strong>Misc</strong></p><p></p><p><strong><span style="text-decoration:underline;">Using grep to print out all the files in a directory</span></strong></p><p>grep -R .</p></div>
+</body>
+</html>

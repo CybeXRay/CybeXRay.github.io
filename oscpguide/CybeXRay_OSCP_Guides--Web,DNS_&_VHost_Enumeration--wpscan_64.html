@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>wpscan</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>wpscan</h1><br/><p><strong><h1>wpscan</h1></strong><h1> is used to scan wordpress for vulnearbilities</h1></p><p></p><p>Register at wpscan to get free api-token</p><p></p><p><a href="https://wpscan.com/profile">https://wpscan.com/profile</a></p><p></p><p></p><p><strong><h3>Plugin Scan</h3></strong></p><p></p><p>wpscan --url <a href="http://10.10.11.125/">http://10.10.11.125/</a> --api-token Z1BvCTDIX71A7sqyrsCT1VbJO94pisaX5XuVG3sJjGE --enumerate p,u --plugins-detection aggressive</p><p></p><p></p><p><strong><h3>To Enumerate Users</h3></strong></p><p></p><p><strong>wpscan --url http://blog.thm/ -e u</strong></p><p></p><p></p><p><strong><h3>To Brute Force Usernames and Passwords</h3></strong></p><p></p><p>Single User</p><p><strong>wpscan --url http://blog.thm/ -P /usr/share/wordlists/rockyou.txt -U kwheel --max-threads 50</strong></p><p></p><p>Take User from File</p><p><strong>wpscan --url http://blog.thm/ -P /usr/share/wordlists/rockyou.txt -U blog_users --max-threads 50</strong></p></div>
+</body>
+</html>

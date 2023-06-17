@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>registry commands</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>registry commands</h1><br/><p><strong><h1>To Change Registry Setting From Command Line:</h1></strong></p><p></p><p><strong>Note:</strong> Registry and GPEdit are complimentary, thus changes are reflected in both of them.</p><p></p><p>Reference: <strong>https://www.windowscentral.com/how-edit-registry-using-command-prompt-windows-10</strong></p><p></p><p></p><p></p><p>Eg.<strong> Adding and Deleteing Registry Key</strong></p><p></p><p>REG ADD &quot;\\RetroWeb\HKLM\SOFTWARE\Policies\Microsoft\Windows Defender&quot; /v DisableAntiSpyware /t REG_DWORD /d 1</p><p></p><p>REG DELETE &quot;\\RetroWeb\HKLM\SOFTWARE\Policies\Microsoft\Windows Defender&quot;</p><p></p><p></p><p>For <strong>Local Machine</strong>, we can use hostname.</p><p></p><p></p><p>REG ADD &quot;\\&lt;hostname&gt;\HKLM\SOFTWARE\Policies\Microsoft\Windows Defender&quot; /v DisableAntiSpyware /t REG_DWORD /d 1</p><p></p><p>REG DELETE &quot;\\&lt;hostname&gt;\HKLM\SOFTWARE\Policies\Microsoft\Windows Defender&quot;</p><p></p><p></p><p>Or</p><p></p><p>REG ADD &quot;HKLM\SOFTWARE\Policies\Microsoft\Windows Defender&quot; /v DisableAntiSpyware /t REG_DWORD /d 1</p><p></p><p>REG DELETE &quot;HKLM\SOFTWARE\Policies\Microsoft\Windows Defender&quot;</p><p></p><p></p></div>
+</body>
+</html>

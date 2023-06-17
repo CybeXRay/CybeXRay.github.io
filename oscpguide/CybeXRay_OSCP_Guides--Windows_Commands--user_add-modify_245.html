@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>user add/modify</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>user add/modify</h1><br/><p><strong><h1>Adding &amp; Modifying Users from Command Line</h1></strong></p><p></p><p></p><p><strong>Change the Password of domain user:</strong></p><p></p><p><strong>net user &lt;username&gt; &lt;password&gt; /domain</strong></p><p>net user brittanycr NewPassword1234 /domain</p><p></p><p></p><p><strong>Create a new user with a password:</strong></p><p></p><p><strong>net user &lt;username&gt; &lt;password&gt; /add</strong></p><p>net user cybex Password1234! /add</p><p></p><p><strong>Add a user to a group:</strong></p><p></p><p><strong>net localgroup &lt;group_name&gt; &lt;user_name&gt; /add</strong></p><p>net localgroup “Remote Management Users&quot; brittanycr /add</p><p>net localgroup Administrators cybex /add</p></div>
+</body>
+</html>

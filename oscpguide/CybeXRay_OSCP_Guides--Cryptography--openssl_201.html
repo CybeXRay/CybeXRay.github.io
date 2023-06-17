@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>openssl</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>openssl</h1><br/><p><strong><h1>Openssl</h1></strong></p><p></p><p><strong><h3>A) Password Generation</h3></strong></p><p></p><p>Used for creating a linux password to be added to /etc/passwd file</p><p></p><p><strong>openssl passwd -6 -salt xebyc my_password</strong></p><p></p><p>Note: The number -6 represents hash algorithm</p><p></p><p>-1 : MD5</p><p>-5	: SHA-256</p><p>-6	: SHA-512 (Used by default in Linux Passwords)</p><p></p><p><img src="images/201-1.png" alt="images/201-1.png" /></p><p></p><p></p><p>Book Note</p><p></p><p><img src="images/201-2.png" alt="images/201-2.png" /></p><p></p><p></p><p></p><p>Using Custom C Program to create Password</p><p><img src="images/201-3.png" alt="images/201-3.png" /></p><p></p><p>To use it check the following:</p><p><img src="images/201-4.png" alt="images/201-4.png" /></p><p></p><p></p><p><strong><h3>B) Certificate Generation</h3></strong></p><p></p><p>We can create a public and private key with openssl using cert.pfx and the password we cracked with john.</p><p></p><p>Private Key:</p><p>openssl pkcs12 -in cert.pfx -nocerts -out key.pem -nodes</p><p></p><p>Public Key:</p><p>openssl pkcs12 -in cert.pfx -out crt.pem -clcerts -nokeys</p><p></p><p><img src="images/201-5.png" alt="images/201-5.png" /></p><p></p><p>we got the certificates.</p></div>
+</body>
+</html>

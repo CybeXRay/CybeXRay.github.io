@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>dig</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>dig</h1><br/><p><strong><h2>Dig</h2></strong></p><p></p><p>When you visit a website in your web browser this all happens automatically, but we can also do it manually with a tool called<strong> dig</strong> . Like ping and traceroute, dig should be installed automatically on Linux systems.</p><p><strong>Dig</strong> allows us to manually query recursive DNS servers of our choice for information about domains:</p><p><strong> </strong></p><p><strong> dig &lt;domain&gt; @&lt;dns-server-ip&gt;</strong></p><p></p><p>It is a very useful tool for network troubleshooting.</p><p><img src="images/249-1.png" alt="images/249-1.png" /></p><p></p><p>This is a lot of information. We&#39;re currently most interested in the <strong>ANSWER</strong> section  for this room; however, taking the time to learn what the rest of this  means is a very good idea. In summary, that information is telling us  that we sent it one query and successfully (i.e. No Errors) received one  full answer -- which, as expected, contains the IP address for the  domain name that we queried.</p><p></p><p>Another interesting piece of information that dig gives us is the <strong>TTL (Time To Live)</strong> of the queried DNS  record. As mentioned previously, when your computer queries a domain  name, it stores the results in its local cache. The TTL of the record  tells your computer when to stop considering the record as being valid  -- i.e. when it should request the data again, rather than relying on  the cached copy.</p><p></p><p>The <strong>TTL</strong> can be found in the second column of the answer section:</p><p><a href="https://muirlandoracle.co.uk/wp-content/uploads/2020/03/TTL.png"><img src="images/249-2.png" alt="images/249-2.png" /></a></p><p></p><p>It&#39;s important to remember that <strong>TTL</strong> (in the context of DNS caching) is measured in <strong>seconds</strong>, so the record in the example will expire in <strong>two</strong> <strong>minutes and thirty-seven seconds</strong></p><p></p><p></p><p><strong><span style="text-decoration:underline;">Example Usage in Ra 2 CTF</span></strong></p><p></p><p><strong>dig windcorp.thm any @10.10.194.219</strong></p><p></p><p><img src="images/249-3.png" alt="images/249-3.png" /></p></div>
+</body>
+</html>

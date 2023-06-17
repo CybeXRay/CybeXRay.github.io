@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>bolt</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>bolt</h1><br/><p><strong><h1>THM: Bolt</h1></strong></p><p></p><p><strong><h3>Nmap Scan</h3></strong></p><p></p><p><img src="images/21-1.png" alt="images/21-1.png" /></p><p></p><p>We found 3 open ports: <strong>22,80,8000</strong></p><p>We find a CMS (Content Management System) in 8000 port.</p><p></p><p><strong><h3>Website Emuneration</h3></strong></p><p></p><p>Manual Browsing:</p><p>Upon browsing the website we find a username and password. </p><p><strong>Note: </strong>Both username and password are present in clear text in the webpage.</p><p></p><p>Credential Found:</p><p><strong>Username:	bolt</strong></p><p><strong>Password:		boltadmin123</strong></p><p></p><p>Also during browsing we came to know the website is using a <strong>Bolt CMS</strong>. This can be found by the link provided to its official site.</p><p>Next, upon searching online we found that, the <strong>default</strong> Bold CMS Management page is at <strong>/bolt</strong></p><p></p><p><img src="images/21-2.png" alt="images/21-2.png" /></p><p></p><p>We use the found credentials to login the <strong>Bolt CMS</strong>.</p><p>Upon Login we found the version to be <strong>3.7.1</strong></p><p></p><p><strong><h3>Foothold</h3></strong></p><p></p><p>Upon research we find the <strong>Bolt CMS 3.7.0</strong> has a vulnerability which can be exploited using metsploit framework. We tried the same exploit on this version. (We got lucky)</p><p></p><p>We will use: <strong>exploit/unix/webapp/bolt_authenticated_rce</strong></p><p></p><p><img src="images/21-3.png" alt="images/21-3.png" /></p><p></p><p>We set the above options. Following is the final <strong>show options</strong> page</p><p></p><p><img src="images/21-4.png" alt="images/21-4.png" /></p><p></p><p>We run the exploit and get root shell access.</p><p></p><p><img src="images/21-5.png" alt="images/21-5.png" /></p><p></p><p>We collect the flags.</p><p></p><p>Thanks!!</p></div>
+</body>
+</html>

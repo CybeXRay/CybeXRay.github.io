@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Hands on</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Hands on</h1><br/><p><strong>THM: https://tryhackme.com/room/activedirectorybasics</strong></p><p><strong>Task: 8</strong></p><p></p><p><strong>Lab Setup -</strong> </p><p></p><p>﻿1.) Deploy the Machine</p><p></p><p>2.) SSH or RDP into the machine (or use the browser-based instance)</p><p></p><p>Username: Administrator</p><p>Password: password123@</p><p>Domain: CONTROLLER.local</p><p></p><p><strong>PowerView Setup - </strong></p><p></p><p>﻿1.) cd Downloads - navigate to the directory PowerView is in</p><p></p><p>2.) powershell -ep bypass - load a powershell shell with execution policy bypassed</p><p></p><p>3.) . .\PowerView.ps1 - import the PowerView module</p><p></p><p><img src="images/144-1.png" alt="images/144-1.png" /></p><p></p><p></p><p>Powerview Cheatsheet: <strong>https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993</strong></p><p></p><p></p><p><strong>Some Commands:</strong></p><p></p><p><em><strong>Get-NetComputer -fulldata | select operatingsystem</strong></em><strong> </strong>		:	 Gets a list of all operating systems on the domain</p><p></p><p><img src="images/144-2.png" alt="images/144-2.png" /></p><p><em><strong>Get-NetUser | select cn</strong></em> 		:	 Gets a list of all users on the domain</p><p></p><p><img src="images/144-3.png" alt="images/144-3.png" /></p><p></p><p><em><strong>Get-NetGroup -groupname *</strong></em>									:	Shows all the groups of the domain</p><p><em><strong>Get-NetGroup -groupname * | Select-String &#39;V&#39;</strong></em>	:	Shows all the groups of the domain and Select_string is used as grep</p><p></p><p><img src="images/144-4.png" alt="images/144-4.png" /></p><p></p><p></p><p><em><strong>Get-NetUser -SPN	</strong></em>																				:	Shows all SPN users</p><p><em><strong>Get-NetUser -SPN | ?{$_.memberof -match &#39;Domain Admins&#39;}</strong></em>	:	Shows SPN users who are also the member of <strong>Domain Admins</strong> group</p><p></p><p><img src="images/144-5.png" alt="images/144-5.png" /></p></div>
+</body>
+</html>

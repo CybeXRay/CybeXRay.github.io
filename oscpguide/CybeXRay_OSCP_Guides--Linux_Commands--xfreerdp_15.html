@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>xfreerdp</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>xfreerdp</h1><br/><p>Remote Desktop Client</p><p></p><p>apt-get install freerdp2-x11</p><p>Default Port: 3389 TCP/UDP</p><p></p><p>xfreerdp	/v:{Target_IP}		/cert:ignore		/u:{Username} 	/p:{Password}</p><p>Note: For Misconfigured servers we can leave the /p: field and just hit enter when asked for Password</p><p></p><p><img src="images/15-1.png" alt="images/15-1.png" /></p><p></p><p>/cert:ignore : Specifies to the scrips that all security certificate usage should be ignored. (We can omit this and accept the certificate when asked)</p><p>/u:Administrator : Specifies the login username to be &quot;Administrator&quot;.</p><p>/v:{target_IP} : Specifies the target IP of the host we would like to connect to.</p><p></p><p></p><p>eg.</p><p>xfreerdp -f /v:10.129.162.16 /u:htb-student /cert:ignore /p:Academy_WinFun!</p><p></p><p>-f:		For Full screen</p><p></p><p>eg.(Best Way)</p><p>xfreerdp /dynamic-resolution +clipboard /cert:ignore /v:10.10.212.167 /u:Administrator /p:&#39;TryH4ckM3!&#39;</p><p></p><p></p></div>
+</body>
+</html>

