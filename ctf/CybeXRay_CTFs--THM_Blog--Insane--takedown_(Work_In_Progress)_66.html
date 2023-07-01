@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>takedown (Work In Progress)</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>takedown (Work In Progress)</h1><br/><p><strong><h1>THM: Takedown</h1></strong></p><p><img src="images/66-1.png" alt="images/66-1.png" /></p><p></p><p><strong>NOTE: </strong>We have to keep a lookout for the above files as these were used to takeover the system by RISOTTO group in the past.</p><p></p><p><strong><h2>Enumeration</h2></strong></p><p></p><p><strong><h4>Nmap</h4></strong><h4></h4></p><p><h4></h4></p><p><img src="images/66-2.png" alt="images/66-2.png" /></p><p></p><p><strong><h4>Directory listing</h4></strong></p><p></p><p><img src="images/66-3.png" alt="images/66-3.png" /></p><p></p><p>Upon viewing the directories we found intresting files that were listed in the Official Document provided to us in the room.</p><p></p><p><img src="images/66-4.png" alt="images/66-4.png" /></p><p></p><p>We will download both these files to our local Kali machine to examine them.</p><p>Next, upon seeing the nmap scan earlier we noticed a <strong>file</strong> <strong>disallowed</strong> in <strong>robots.txt</strong></p><p></p><p><img src="images/66-5.png" alt="images/66-5.png" /></p><p></p><p>We go to the location &amp; get the following error.</p><p><img src="images/66-6.png" alt="images/66-6.png" /></p><p></p><p>Maybe this is not an image file. We will download the file to examine it. As it is not listed in the directory, we need to use wget command to download the file.</p><p></p><p><strong>wget http://takedown.thm.local/favicon.ico</strong></p><p></p><p><img src="images/66-7.png" alt="images/66-7.png" /></p><p></p><p>Next, we will examine the files.</p><p><img src="images/66-8.png" alt="images/66-8.png" /></p><p></p><p>when we use the <strong>file</strong> command to show the details of the files, we got <strong>shutterbug.jpg</strong> as normal image file. However, the <strong>shutterbug.jpg.bak</strong> file is a <strong>linux executible </strong>&amp; the <strong>favicon.ico</strong> is a <strong>windows executible</strong> file.</p><p></p></div>
+</body>
+</html>
